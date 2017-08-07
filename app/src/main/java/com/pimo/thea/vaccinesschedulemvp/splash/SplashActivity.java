@@ -51,7 +51,6 @@ public class OnboardingActivity extends AppCompatActivity implements OnboardingC
     public void showHome() {
         Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
-        finish();
     }
 
     @Override

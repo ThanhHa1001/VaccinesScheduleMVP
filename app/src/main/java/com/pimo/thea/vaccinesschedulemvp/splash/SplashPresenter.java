@@ -1,12 +1,8 @@
-package com.pimo.thea.vaccinesschedulemvp.onboarding;
+package com.pimo.thea.vaccinesschedulemvp.splash;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.Cursor;
-import android.net.Uri;
 import android.os.AsyncTask;
-import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -15,8 +11,6 @@ import com.pimo.thea.vaccinesschedulemvp.data.Childcare;
 import com.pimo.thea.vaccinesschedulemvp.data.Disease;
 import com.pimo.thea.vaccinesschedulemvp.data.Vaccine;
 import com.pimo.thea.vaccinesschedulemvp.data.source.VaccinesScheduleRepository;
-import com.pimo.thea.vaccinesschedulemvp.utils.FileHelper;
-import com.pimo.thea.vaccinesschedulemvp.view.DialogLoading;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -24,23 +18,21 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by thea on 8/5/2017.
  */
 
-public class OnboardingPresenter implements OnboardingContract.Presenter {
+public class OnboardingPresenter implements SplashContract.Presenter {
 
     private VaccinesScheduleRepository repository;
-    private OnboardingContract.View view;
+    private SplashContract.View view;
     private Context context;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
     private boolean isAcceptTerms = false;
 
-    public OnboardingPresenter(Context context, VaccinesScheduleRepository repository, OnboardingContract.View view) {
+    public OnboardingPresenter(Context context, VaccinesScheduleRepository repository, SplashContract.View view) {
         this.context = context;
         this.repository = repository;
         this.view = view;
