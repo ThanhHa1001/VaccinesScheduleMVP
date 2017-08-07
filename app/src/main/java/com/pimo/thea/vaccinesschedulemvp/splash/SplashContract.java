@@ -1,4 +1,4 @@
-package com.pimo.thea.vaccinesschedulemvp.onboarding;
+package com.pimo.thea.vaccinesschedulemvp.splash;
 
 import com.pimo.thea.vaccinesschedulemvp.BasePresenter;
 import com.pimo.thea.vaccinesschedulemvp.BaseView;
@@ -7,11 +7,15 @@ import com.pimo.thea.vaccinesschedulemvp.BaseView;
  * Created by thea on 8/5/2017.
  */
 
-public class OnboardingContract {
+public class SplashContract {
 
     interface View extends BaseView {
 
-        void showHome();
+        void showHomeActivity();
+
+        void showUseOfTheTerms();
+
+        void hideImageViewIcon();
 
         void showDialogLoading();
 

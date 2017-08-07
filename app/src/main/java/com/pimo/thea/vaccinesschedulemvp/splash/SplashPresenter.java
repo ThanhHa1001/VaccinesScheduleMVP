@@ -3,6 +3,7 @@ package com.pimo.thea.vaccinesschedulemvp.splash;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
+import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -23,16 +24,14 @@ import java.io.InputStream;
  * Created by thea on 8/5/2017.
  */
 
-public class OnboardingPresenter implements SplashContract.Presenter {
+public class SplashPresenter implements SplashContract.Presenter {
 
+    private static final String PRE_IS_ACCEPT_TERMS = "is_accept_terms";
     private VaccinesScheduleRepository repository;
     private SplashContract.View view;
     private Context context;
-    private SharedPreferences sharedPreferences;
-    private SharedPreferences.Editor editor;
-    private boolean isAcceptTerms = false;
 
-    public OnboardingPresenter(Context context, VaccinesScheduleRepository repository, SplashContract.View view) {
+    public SplashPresenter(Context context, VaccinesScheduleRepository repository, SplashContract.View view) {
         this.context = context;
         this.repository = repository;
         this.view = view;
@@ -45,18 +44,20 @@ public class OnboardingPresenter implements SplashContract.Presenter {
 
     @Override
     public void getAcceptTerms() {
-        sharedPreferences = context.getSharedPreferences("use_of_the_terms", Context.MODE_PRIVATE);
-        isAcceptTerms = sharedPreferences.getBoolean(context.getString(R.string.onboarding_accept_terms_key), false);
-
+        boolean isAcceptTerms =
+                PreferenceManager.getDefaultSharedPreferences(context).getBoolean(PRE_IS_ACCEPT_TERMS, false);
         if (isAcceptTerms) {
-            view.showHome();
+            view.showHomeActivity();
+        } else {
+            view.hideImageViewIcon();
+            view.showUseOfTheTerms();
         }
     }
 
     @Override
     public void acceptTerms() {
-        editor = sharedPreferences.edit();
-        editor.putBoolean(context.getString(R.string.onboarding_accept_terms_key), true);
+        SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(context).edit();
+        editor.putBoolean(PRE_IS_ACCEPT_TERMS, true);
         editor.apply();
 
         insertListMoreInformation();
@@ -85,7 +86,7 @@ public class OnboardingPresenter implements SplashContract.Presenter {
                 inputStream.close();
                 json = new String(buffer, "UTF-8");
             } catch (IOException ex) {
-                Log.e("OnboardingPresenter", "Problem reading the diseases from file json.", ex);
+                Log.e("SplashPresenter", "Problem reading the diseases from file json.", ex);
             }
 
             // If the JSON string is empty or null, then return early.
@@ -133,7 +134,7 @@ public class OnboardingPresenter implements SplashContract.Presenter {
                 // If an error is thrown when executing any of the above statements in the "try" block,
                 // catch the exception here, so the app doesn't crash. Print a log message
                 // with the message from the exception.
-                Log.e("OnboardingPresenter", "Problem parsing the earthquake JSON results", e);
+                Log.e("SplashPresenter", "Problem parsing the earthquake JSON results", e);
             }
             return null;
         }
@@ -142,7 +143,7 @@ public class OnboardingPresenter implements SplashContract.Presenter {
         @Override
         protected void onPostExecute(Void aVoid) {
             view.dismissDialogLoading();
-            view.showHome();
+            view.showHomeActivity();
         }
     }
 }
