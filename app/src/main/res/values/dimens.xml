@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_main">16sp</dimen>
+
+    <dimen name="text_size_extra">12sp</dimen>
+
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="image_margin">16dp</dimen>
+
+    <dimen name="margin_16dp">16dp</dimen>
+
+    <dimen name="list_child_empty_image_size">72dp</dimen>
+
+    <dimen name="item_child_image_size">48dp</dimen>
+
+    <dimen name="item_list_more_information_image_size">48dp</dimen>
+
+    <dimen name="editor_child_image_size">96dp</dimen>
+
+    <dimen name="item_card_view_padding">16dp</dimen>
+</resources>

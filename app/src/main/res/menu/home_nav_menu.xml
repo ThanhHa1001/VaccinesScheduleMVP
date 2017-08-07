@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group_menu_home"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/nav_home" />
+    </group>
+
+    <group
+        android:id="@+id/group_menu_vaccines"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_vaccine"
+            android:title="@string/nav_vaccine" />
+        <item
+            android:id="@+id/nav_disease"
+            android:title="@string/nav_disease" />
+        <item
+            android:id="@+id/nav_childcare"
+            android:title="@string/nav_childcare" />
+    </group>
+
+    <group
+        android:id="@+id/group_menu_information"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_information"
+            android:title="@string/nav_information" />
+    </group>
+
+</menu>

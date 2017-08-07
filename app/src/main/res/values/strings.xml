@@ -1,0 +1,154 @@
+<resources>
+    <string name="app_name">VaccinesScheduleMVP</string>
+
+    <!-- Menu -->
+    <string name="nav_home">Home</string>
+    <string name="nav_vaccine">Vắc-xin</string>
+    <string name="nav_disease">Bệnh truyền nhiễm</string>
+    <string name="nav_childcare">Chăm sóc trẻ</string>
+    <string name="nav_information">Thông tin ứng dụng</string>
+
+    <string name="editor_child_save">Save</string>
+    <string name="editor_child_delete">Delete</string>
+
+    <!-- Title toolbar-->
+    <string name="home_title_home">Danh sách trẻ</string>
+    <string name="home_title_vaccine">Vắc-xin</string>
+    <string name="home_title_disease">Bệnh truyền nhiễm</string>
+    <string name="home_title_childcare">Chăm sóc trẻ</string>
+    <string name="editor_child_title_toolbar_add">Thêm thông tin trẻ</string>
+    <string name="editor_child_title_toolbar_edit">Sửa thông tin trẻ</string>
+    <string name="detail_inj_child_toolbar_title">Thông tin chi tiết</string>
+    <string name="detail_m_i_title_toolbar_disease">Thông tin bệnh truyền nhiễm</string>
+    <string name="detail_m_i_title_toolbar_vaccine">Thông tin vắc-xin</string>
+    <string name="detail_m_i_title_toolbar_childcare">Thông tin chi tiết</string>
+
+    <!-- Title tab layout-->
+    <string name="detail_inj_child_schedule">Ngày tiêm</string>
+    <string name="detail_inj_child_vaccine">Vắc-xin</string>
+    <!-- Message -->
+    <string name="list_child_empty">Danh sách trống\nNhấn nút + để thêm thông tin trẻ</string>
+    <string name="editor_child_validate">Bạn hãy nhập đủ các trường bắt buộc - (*)</string>
+
+    <!-- Editor child fragment-->
+    <!-- choose image-->
+    <string name="choose_cropping_app">Chọn ứng dụng cắt ảnh</string>
+    <string name="capture_photo">Ảnh đại diện mới</string>
+    <string name="choose_from_gallery">Chọn từ bộ sưu tập</string>
+    <!-- permission storage-->
+    <string name="permission_storage_rationale">Ứng dụng cần hỏi quyền đọc, ghi bộ sưu tập.</string>
+    <string name="permission_ok">ĐỒNG Ý</string>
+    <string name="permission_not_granted">Ứng dụng không được cấp quyền.</string>
+    <string name="permission_storage_how_to_open_in_settings">Mở Thông tin ứng dụng rồi nhấn vào Quyền và Mở Bộ nhớ.</string>
+    <string name="permission_open_settings">SETTINGS</string>
+    <!-- ui -->
+    <string name="editor_child_add_image">Thêm ảnh</string>
+    <string name="editor_child_full_name">Tên của bé (*)</string>
+    <string name="editor_child_tob">Thời gian bé chào đời</string>
+    <string name="editor_child_dob">Ngày sinh của bé (*)</string>
+    <string name="editor_child_new_born_weight">Cân nặng mới sinh</string>
+    <string name="editor_child_new_born_height">Chiều dài mới sinh</string>
+    <string name="editor_child_present_weight">Cân nặng hiện tại</string>
+    <string name="editor_child_present_height">Chiều cao hiện tại</string>
+    <string name="editor_child_crop_image_unavailable">Thiết bị không hỗ trợ chỉnh sửa ảnh</string>
+    <!-- Title gender-->
+    <string name="gender_male">Bé trai</string>
+    <string name="gender_male_1">Nam</string>
+    <string name="gender_female">Bé gái</string>
+    <string name="gender_female_1">Nữ</string>
+
+
+    <!-- List child fragment-->
+    <!-- Item list child-->
+    <string name="item_child_list_next_day_injection">Ngày tiêm tiếp theo: %s</string>
+    <!-- Title gender for aray gender options-->
+    <string-array name="array_gender_options">
+        <item>Giới tính của bé (*)</item>
+        <item>Bé trai</item>
+        <item>Bé gái</item>
+    </string-array>
+
+    <!-- List more information fragment-->
+    <!-- Item list-->
+    <string name="item_list_more_information_title">Bệnh %s</string>
+
+    <!-- Detail more information fragment -->
+    <string name="detail_m_i_disease_description">Mô tả</string>
+    <string name="detail_m_i_disease_schedule">Lịch tiêm</string>
+    <string name="detail_m_i_vaccine_definition">Thông tin cơ bản</string>
+    <string name="detail_m_i_vaccine_after_inj_reaction">Triệu chứng sau tiêm</string>
+    <string name="detail_m_i_childcare_content">Thông tin cơ bản</string>
+    <string name="detail_m_i_childcare_note">Mẹo/ Mách nhỏ</string>
+
+
+    <!-- Dialog -->
+    <string name="dialog_loading_loading">Đang tải</string>
+    <string name="dialog_loading_insert_db">Đang khởi tạo ứng dụng...</string>
+    <string name="dialog_warning_title">Đồng ý thay đổi?</string>
+    <string name="dialog_warning_notification_changes_dob_child">Bạn đã thay đổi ngày sinh của em bé,
+        nếu đồng ý lưu thay đổi này mọi thông tin về lịch tiêm trước đó sẽ bị xóa và cập nhật mới.
+        Nếu không đồng ý mọi thay đổi sẽ bị hủy và thoát cập nhật thông tin bé.</string>
+    <string name="dialog_warning_edit_text_action">Đồng ý</string>
+    <string name="dialog_warning_edit_text_action_not">Không đồng ý</string>
+
+    <string name="dialog_alert_delete_confirmation">Xóa thông tin bé?</string>
+    <string name="dialog_alert_delete_action_confirmation">Xóa</string>
+    <string name="dialog_alert_not_delete_action_confirmation">Không xóa</string>
+
+    <!-- Title injection schedule -->
+    <string name="vaccine_lao">Vắc-xin phòng bệnh Lao</string>
+    <string name="vaccine_viem_gan_B">Vắc-xin viêm gan B</string>
+    <string name="vaccine_quinvaxem">Vắc-xin Quinvaxem</string>
+    <string name="vaccine_bai_liet">Vắc-xin Bại liệt</string>
+    <string name="vaccine_soi">Vắc-xin Sởi</string>
+    <string name="vaccine_soi_rubbela">Vắc-xin Sởi_Rubbela</string>
+    <string name="vaccine_viem_nao_nhat_ban">Vắc-xin Viêm não Nhật Bản</string>
+    <string name="vaccine_ta">Vắc-xin Tả</string>
+    <string name="vaccine_thuong_han">Vắc-xin Thương hàn</string>
+    <string name="vaccine_uon_van">Vắc-xin Uốn ván</string>
+    <string name="vaccine_tiem_nhac_bachau_hoga_uonvan">Vắc-xin tiêm nhắc bạch hầu, uốn ván và ho gà (DPT)</string>
+
+    <!-- Title for group in recycler view in detail inj schedule child-->
+    <string name="new_born">Sơ sinh</string>
+    <string name="age_months">tháng tuổi</string>
+
+    <!-- Text in item detail inj schedule child-->
+    <string name="is_inject_done">Đã tiêm</string>
+    <string name="is_inject_not_done">Chưa tiêm</string>
+    <string name="shot_number_inject">Mũi tiêm số %s</string>
+    <string name="day_injection">Ngày tiêm</string>
+    <string name="note">Ghi chú</string>
+    <string name="btn_save_information">Cập nhật thông tin</string>
+    <string name="update_injection_schedule_failed">Lỗi khi cập nhật</string>
+    <string name="update_injection_schedule_successful">Cập nhật thành công</string>
+    <string name="lot_number">Số lô</string>
+    <string name="exp_date">Hạn sử dụng</string>
+    <string name="doctor_injected">Bác sĩ</string>
+    <string name="nurse_injected">Y tá</string>
+    <string name="place_of_vaccination">Địa điểm tiêm</string>
+
+    <!-- Content for Toast-->
+    <string name="toast_update_successfully">Cập nhật thành công</string>
+    <!-- Content for notification-->
+    <string name="notification_content_title">Sổ tiêm chủng</string>
+    <string name="notification_injection_child" formatted="false">Hãy đứa bé %s đi tiêm %s</string>
+
+    <!-- Onboarding activity-->
+    <string name="onboarding_use_of_the_terms">Điều khoản sử dụng</string>
+    <string name="onboarding_term_1">1/ Ứng dụng này nhằm mục đích cung cấp kiến thức về tiêm chủng trẻ em
+        cho phụ huynh có con em trong lứa tuổi từ lúc mới sinh đến 5 tuổi</string>
+    <string name="onboarding_term_2">2/ Mọi kiến thức chỉ có giá trị tham khảo. Phụ huynh cần phải tư vấn với
+    bác sĩ tại nơi tiêm chủng để có quyết định sau cùng. Không khuyến khích việc sử dụng này để buốc
+    bác sĩ hay y tá chỉ định tiêm theo ý muốn.</string>
+    <string name="onboarding_term_3">3/ Kiến thức luôn đổi mới theo thời gian. Các kiến thức trong ứng dụng này
+    dù có cố gắng cập nhật, có thể không luôn luôn chính xác.</string>
+    <string name="onboarding_term_4">4/ Ứng dụng này là miễn phí và không quảng cáo cho một vắc-xin cụ thể nào.
+    Mọi tên biệt dược xuất hiện trong ứng dụng đều là ngẫu nhiên hoặc
+        liên quan đến kiến thức chung về vắc-xin đó.</string>
+    <string name="onboarding_term_5">5/ Mọi vấn đề về kiện tụng pháp lý liên quan tới các kiến thức
+        trong ứng dụng này là vô giá trị.</string>
+    <string name="onboarding_btn_accept_use_of_the_terms">Đồng ý với điều khoản</string>
+    <string name="onboarding_accept_terms_key" translatable="false">accept_terms</string>
+
+
+</resources>

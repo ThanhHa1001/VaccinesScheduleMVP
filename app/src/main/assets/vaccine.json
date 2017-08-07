@@ -1,0 +1,297 @@
+{
+    "type":"VaccineCollection",
+    "metadata": {
+        "url":"",
+        "title":"Vaccine",
+        "status":"",
+        "time":"01/04/2017",
+        "version":"1.0"
+    },
+    "details":[
+        {
+            "type":"diseases",
+            "properties": {
+                "name":"Lao",
+                "description":"Là bệnh gây ra bởi vi khuẩn có tên là Mycobacterium tuberculosis và thường gây bệnh ở phổi. Bệnh lao có thể chữa khỏi và phòng tránh được. Vi khuẩn Lao lây từ người sang người qua đường không khí. Khi người bệnh lao phổi ho, hắt hơi hay khạc nhổ, họ đã phát tán vi khuẩn lao vào không khí. Một người chỉ cần hít phải một lượng nhỏ vi khuẩn lao cũng sẽ nhiễm lao. Khi một người bị bệnh lao, các triệu chứng như ho, sốt, ra mồ hôi ban đêm, sụt cân… có thể chỉ ở mức độ nhẹ trong vài tháng. Điều này có thể dẫn đến việc chậm tìm kiếm dịch vụ y tế gây ra việc tiếp tục lây lan trong cộng đồng. Một người bị bệnh lao có thể gây nhiễm vi khuẩn lao cho khoảng 10 – 15 người mỗi năm thông qua các hoạt động giao tiếp hàng ngày.",
+                "code":"BL",
+                "injectionSchedule":"Càng sớm càng tốt ngay sau sinh"   
+            }
+        },
+        {   
+            "type":"diseases",
+            "properties": {
+                "name":"Viêm gan B",
+                "description":"Là bệnh nhiễm trùng gan rất nghiêm trọng và có khả năng đe dọa tính mạng do vi rút viêm gan B gây ra. Đó là loại viêm gan siêu vi nghiêm trọng nhất và là một vấn đề lớn của y tế toàn cầu. Nhiễm viêm gan B là nguyên nhân hàng đầu của bệnh xơ gan và ung thư gan. Vi rút viêm gan B rất dễ lây. Khả năng lây nhiễm cao hơn HIV từ 50 đến 100 lần. Viêm gan B lây truyền qua tiếp xúc với máu hoặc các chất dịch cơ thể của một người bị nhiễm vi rút viêm gan B mãn tính. Hiện chưa có cách chữa trị viêm gan B, và những người bị nhiễm bệnh có thể truyền bệnh viêm gan B cho người khác. Vì vậy, việc phòng ngừa là lựa chọn tốt nhất để đối phó với căn bệnh này cũng như hậu quả của nó. Có một loại vắc-xin an toàn, hiệu quả và được sử dụng rộng rãi giúp ngăn ngừa nhiễm virus viêm gan B. Mọi người cũng nên áp dụng biện pháp phòng ngừa hợp lý để tránh lây nhiễm, chẳng hạn như không dùng chung bàn chải đánh răng hoặc dao cạo với người khác.",
+                "code":"BVGB",
+                "injectionSchedule":"Càng sớm càng tốt ngay sau khi sinh (trong vòng 24 giờ)"
+            }
+        },
+        {
+            "type":"diseases",
+            "properties": {
+                "name":"Bạch hầu",
+                "description":"Là bệnh nhiễm trùng nhiễm độc do trực khuẩn Bạch hầu (Corynebacterium diphtheria) gây ra. Vi khuẩn tiết ra ngoại độc tố gây tổn thương nhiều tổ chức và cơ quan của cơ thể. Bệnh có thể lây truyền truyền trực tiếp từ người bệnh sang người lành qua đường hô hấp hoặc gián tiếp qua đồ chơi, vật dụng. Vi khuẩn bạch hầu có thể xâm nhập qua da tổn thương gây bạch hầu da. Sau khoảng 2 tuần nhiễm vi khuẩn, bệnh nhân có thể gây lây nhiễm cho người khác. Bệnh bạch hầu thường gặp với những triệu chứng điển hình như sốt nhẹ, đau họng, ho, khàn tiếng, chán ăn. Sau 2-3 ngày, xuất hiện giả mạc mặt sau hoặc hai bên thành họng, có màu trắng ngà, xám hoặc đen. Giả mạc dai, dính, dễ chảy máu. Đây là dấu hiệu quan trọng nhất để phát hiện bệnh. Bệnh nhân có thể có dấu hiệu khó thở, khó nuốt. Bệnh có thể qua khỏi hoặc trở nên trầm trọng và tử vong trong vòng 6-10 ngày. Trường hợp bệnh nặng không có biểu hiện sốt cao nhưng có dấu hiệu sưng to cổ, khàn tiếng, khó thở, rối loạn nhịp tim, liệt.",
+                "code":"BBH",
+                "injectionSchedule":"Vaccine phối hợp phòng 5 bệnh Bạch hầu, ho gà, uốn ván, viêm gan B và viêm phổi viêm màng não do vi khuẩn Hib.\n Mũi tiêm thứ 1: khi trẻ 2 tháng tuổi \n Mũi tiêm thứ 2: khi trẻ 3 tháng tuổi \n Mũi tiêm thứ 3: khi trẻ 4 tháng tuổi"
+            } 
+        },
+        {
+            "type":"diseases",
+            "properties": {
+                "name":"Ho gà",
+                "description":"Là bệnh rất dễ lây, gây ra bởi một loại vi khuẩn có tên là Bordetella pertussis. Vi khuẩn này bám vào các nhung mao (nhỏ, duỗi thẳng như sợi tóc) lót ở phía trong một phần đường hô hấp trên. Vi khuẩn giải phóng độc tố, làm tổn thương nhung mao và gây viêm (phù nề). Ho gà là một bệnh rất dễ lây lan, chỉ được phát hiện ở người và được lây truyền từ người sang người. Người bị ho gà thường lây bệnh khi ho hoặc hắt hơi trong khi tiếp xúc gần với những người khác, sau đó những người này hít thở phải vi khuẩn ho gà. Nhiều trẻ sơ sinh bị ho gà do lây bệnh từ anh chị em, bố mẹ hoặc người chăm sóc mà thậm chí có thể họ không biết họ có bệnh. Các triệu chứng của bệnh ho gà thường xuất hiện trong vòng 5 – 7 ngày sau khi phơi nhiễm, nhưng đôi khi nó không biểu hiện trong khoảng thời gian 3 tuần. Ho gà có thể gây bệnh nghiêm trọng cho trẻ sơ sinh, trẻ em và người lớn. Bệnh thường bắt đầu bằng triệu chứng giống như cảm lạnh và có thể có ho ít hoặc sốt nhẹ. Sau 1- 2 tuần thì ho nhiều bắt đầu. Không giống như cảm lạnh, ho gà có thể biểu hiện một loạt các cơn ho liên tục trong nhiều tuần. Ở trẻ sơ sinh, ho có thể tối thiểu hoặc thậm chí không có. Trẻ sơ sinh có thể có một triệu chứng là “ngừng thở”. Ngừng thở là một tình trạng tạm dừng hô hấp của trẻ. Ho gà là bệnh nguy hiểm nhất đối với trẻ nhỏ. Một nửa số trẻ nhỏ dưới 1 tuổi bị ho gà phải nhập viện.",
+                "code":"BHG",
+                "injectionSchedule":"Vaccine phối hợp phòng 5 bệnh Bạch hầu, ho gà, uốn ván, viêm gan B và viêm phổi viêm màng não do vi khuẩn Hib.\n Mũi tiêm thứ 1: khi trẻ 2 tháng tuổi \n Mũi tiêm thứ 2: khi trẻ 3 tháng tuổi \n Mũi tiêm thứ 3: khi trẻ 4 tháng tuổi"
+            }
+        },
+        {
+            "type":"diseases",
+            "properties": {
+                "name":"Uốn ván",
+                "description":"Là bệnh nhiễm trùng cấp tính có tỷ lệ tử vong cao do ngoại độc tố của trực khuẩn uốn ván ( Clostridium tetani ) gây ra.  Khi mắc bệnh uốn ván tỷ lệ tử vong rất cao 25 – 90% . Đặc biệt là uốn ván rốn ở trẻ sơ sinh, tử vong trên 95%. Trực khuẩn này phát triển tại vết thương trong điều kiện yếm khí, sau đó giải phóng ngoại độc tố vào máu và tấn công vào các bản vận động thần kinh – cơ, làm cho bệnh nhân bị co cứng cơvà trên nền cứng đó xuất hiện các cơn co giật. Do bị trầy xát và viết thương tiếp xúc trực tiếp với trực  khuẩn uốn ván Clostridium tetani có trong đất, cát bụi, phân trâu bò ngựa và gia cầm, cống rãnh, dụng cụ phẫu thuật không tiệt trùng kỹ …, xâm nhập vào các vết thương, vết xây xước phát triển thành ổ nhiễm trùng  gây bệnh uốn ván. Uốn ván ở trẻ sơ sinh, thường khởi phát trong 2 tuần đầu sau khi sinh với các dấu hiệu: trẻ bỏ bú, cứng cơ và các cơn co cứng; thường là uốn ván toàn thân và dễ dẫn đến tử vong nếu không điều trị.",
+                "code":"BUV",
+                "injectionSchedule":"Vaccine phối hợp phòng 5 bệnh Bạch hầu, ho gà, uốn ván, viêm gan B và viêm phổi viêm màng não do vi khuẩn Hib.\n Mũi tiêm thứ 1: khi trẻ 2 tháng tuổi \n Mũi tiêm thứ 2: khi trẻ 3 tháng tuổi \n Mũi tiêm thứ 3: khi trẻ 4 tháng tuổi"
+            }
+        },
+        {   
+            "type":"diseases",
+            "properties": {
+                "name":"Hib",
+                "description":"Là bệnh do vi khuẩn Haemophilus influenzae loại b gây ra. Bệnh này có thể gây ra: Viêm màng não (viêm lớp màng bao quanh não và dây thần kinh cột sống), Viêm nắp thanh quản (nắp thanh quản ở sâu trong cổ họng bị sưng trầm trọng), Viêm phổi, Viêm tủy xương, Viêm mô tế bào. Vi khuẩn Hib có thể sống vô hại trong cổ họng của người khỏe mạnh. Vi khuẩn này lây lan qua việc tiếp xúc với những hạt nước li ti bắn ra từ mũi hoặc cổ họng của người bệnh, trong khung cảnh tụ họp giống như gia đình. Người ta không cần phải có triệu chứng mới lây vi khuẩn này. Việc trị liệu gồm sử dụng thuốc kháng sinh, thuốc giảm sốt và đau (chẳng hạn như paracetamol) và chất lỏng để tránh tình trạng bị mất nước.",
+                "code":"BH",
+                "injectionSchedule":"Vaccine phối hợp phòng 5 bệnh Bạch hầu, ho gà, uốn ván, viêm gan B và viêm phổi viêm màng não do vi khuẩn Hib.\n Mũi tiêm thứ 1: khi trẻ 2 tháng tuổi \n Mũi tiêm thứ 2: khi trẻ 3 tháng tuổi \n Mũi tiêm thứ 3: khi trẻ 4 tháng tuổi"
+            }
+        },
+        {
+            "type":"diseases",
+            "properties": {
+                "name":"Bại liệt",
+                "description":"Là bệnh nhiễm vi rút cấp tính lây truyền theo đường tiêu hóa do vi rút Polio gây lên, có thể lan truyền thành dịch. Bệnh được nhận biết qua biểu hiện của hội chứng liệt mềm cấp. Vi rút Polio sau khi vào cơ thể sẽ đến hạch bạch huyết, tại đây một số ít vi rút Polio xâm nhập vào hệ thống thần kinh trung ương gây tổn thương ở các tế bào sừng trước tủy sống và tế bào thần kinh vận động của vỏ não. Khả năng tồn tại của vi rút bại liệt ở môi trường bên ngoài: Vi rút bại liệt sống sai ở môi trường bên ngoài, trong phân, chúng sống được vài ba tháng ở nhiệt độ 0-4°C. Trong nước, ở nhiệt độ thường, chúng sống được 2 tuần. Vi rút bại liệt chịu đựng khô hanh, bị tiêu diệt ở nhiệt độ 56°C sau 30 phút và bị tiêu diệt bởi thuốc tím (KMnO4). Biểu hiện lâm sàng: Thể liệt mềm cấp điển hình: Chiếm 1% với các triệu chứng sốt, chán ăn, nhức đầu, buồn nôn, đau cơ các chi, gáy và lưng, dần dần mất vận động dẫn đến liệt không đối xứng. Mức độ liệt tối đa là liệt tủy sống, liệt hành tủy dẫn đến suy hô hấp và tử vong. Liệt ở chi, không hồi phục làm bệnh nhân khó vận động hoặc mất vận động. Thể viêm màng não vô khuẩn: Sốt, nhức đầu, đau cơ, cứng gáy. Thể nhẹ: Sốt, khó ngủ, nhức đầu, buồn nôn, nôn, táo bón, có thể hồi phục trong vài ngày. Thể ẩn, không rõ triệu chứng là thể thường gặp, song thể nhẹ có thể chuyển biến sang nặng.",
+                "code":"BBL",
+                "injectionSchedule":"Uống liều thứ 1: khi trẻ 2 thnasg tuổi \n Uống liều thứ 2: khi trẻ 3 tháng tuổi \n Uống liều thứ 3: khi trẻ 4 tháng tuổi"
+            }
+        },
+        {
+            "type":"diseases",
+            "properties": {
+                "name":"Sởi",
+                "description":"Là bệnh truyền nhiễm cấp tính với các triệu chứng sốt, phát ban, chảy nước mũi, ho, mắt đỏ... bệnh có thể gặp ở trẻ em, người lớn nếu không có miễn dịch phòng bệnh, có thể gây thành dịch. Bệnh sởi tuy ít gây tử vong nhưng biến chứng có thể gặp là: viêm tai giữa, viêm phổi, tiêu chảy, khô loét giác mạc mắt và đôi khi viêm não sau sởi, đặc biệt ở trẻ em suy dinh dưỡng... Bệnh sởi thường bắt đầu với một cơn sốt khá nhẹ, kèm theo những triệu chứng như ho, chảy mũi, mắt đỏ và đau cổ họng. Khoảng 2, 3 ngày sau, đốm Koplik nổi lên, đốm này là dấu hiệu đặc biệt của bệnh sởi. Sau đó, bệnh nhân có thể bị sốt cao lên tới 104 hay 105 độ F. Cùng lúc đó, những mảng đỏ nổi lên, thường là ở trên mặt, theo đường tóc và sau tai. Những vết đỏ hơi ngứa này có thể dấn lan xuống ngực, lưng và cuối cùng xuống tới đùi và bàn chân. Khoảng một tuần sau, những vết nhỏ này sẽ nhạt dần, vết nào xuất hiện trước sẽ hết trước. Bệnh thường lây qua đường hô hấp, lây trực tiếp khi bệnh nhân ho, hắt hơi, nói chuyến…, lây gián tiếp ít gặp vì virus sởi dễ bị diệt ở ngoại cảnh.",
+                "code":"BS",
+                "injectionSchedule":"Mũi tiêm thứ 1: khi trẻ 9 tháng tuổi \n Mũi tiêm thứ 2 khi trẻ 18 tháng \n Cuối năm 2015, vắc xin phói hợp sởi-rubella sẽ được tiêm thay thế vắc xin sởi dơn khi trẻ 18 tháng."
+            }
+        },
+        {
+            "type":"diseases",
+            "properties": {
+                "name":"Viêm não Nhật Bản",
+                "description":"Là bệnh nhiễm vi rút cấp tính do vi rút VNNB gây ra. Bệnh làm tổn thương nghiêm trọng hệ thần kinh trung ương, thường gặp ở trẻ em dưới 15 tuổi. Là một tình trạng bệnh nguy hiểm do nhiều loại vi rút gây nên, thường gây tổn thương ở não, để lại di chứng thần kinh vàtử vong cao. Biểu hiện chính của bệnh là có sốt cao và kèm theo các triệu chứngliên quan đến tổn thương hệ thần kinh trung ương bao gồm: nhức đầu dữ dội, buồn nôn và nôn mửa, cứng cổ, lú lẫn, mất định hướng, thay đổi nhân cách, co giật, rối loạn nghe nói, ảo giác, mất trí nhớ, đờ đẫn, hôn mê... Người già và trẻ em lànhững người có nguy cơ cao bị mắc bệnh nặng, biến chứng và tử vong. Bệnh không lây trực tiếp từ người sang người. Bệnh được truyền sang người qua muỗi đốt. Muỗi hút máu động bị vật nhiễm vi rút (thường là từ lợn) rồi từ đó lại đốt người và truyền bệnh cho người. Muỗi truyền bệnh Viêm não Nhật Bản được gọi là véc tơ truyền bệnh.",
+                "code":"BVNNB",
+                "injectionSchedule":"Tiêm 2 mũi khi trẻ 1 tuổi. Mũi thứ hai cách mũi thứ nhất 2 tuần. Mũi thứ ba cách mũi thứ hai 1 năm."
+            }
+        },
+        {
+            "type":"diseases",
+            "properties": {
+                "name":"Tả",
+                "description":"Là bệnh truyền nhiễm cấp tính do phẩy khuẩn tả (Vibrio cholerae) gây ra, lây truyền bằng đường tiêu hoá. Bệnh có biểu hiện lâm sàng là ỉa lỏng và nôn nhiều lần, nhanh chóng dẫn đến mất nước - điện giải, truỵ tim mạch, suy kiệt và tử vong nếu không được điều trị kịp thời. Bệnh được xếp vào loại bệnh “tối nguy hiểm”.  Là người bệnh và người mang khuẩn không triệu chứng. Phẩy khuẩn tả được đào thải theo phân ngay từ giai đoạn nung bệnh, nhưng nhiều nhất ở giai đoạn tiêu chảy. Bệnh nhân mắc bệnh tả có thể đào thải 107-108 vi khuẩn/gram phân. Nguồn bệnh: Môi trường sống tự nhiên của V.cholerae là nước mặn gần bờ và ở các cửa sông đổ ra biển. Phẩy khuẩn tả có thể tồn tại và nhân lên ở động vật giáp xác,  khi điều kiện môi trường không phù hợp, chúng có thể chuyển sang trạng thái ngủ và có thể tồn tại hàng tháng, hàng năm. ở trạng thái này vi khuẩn có thể kháng lại chlorid và không thể nuôi cấy. Bệnh lây theo đường tiêu hoá, cụ thể là đường phân-miệng thông qua nguồn nước, thực phẩm, rau quả... đặc biệt là một số hải sản như sò, ốc, hến được bắt từ những nơi ô nhiễm hoặc tay bẩn, dụng cụ ăn uống bị ô nhiễm, qua ruồi, nhặng, chuột, dán... làm lây lan mầm bệnh.",
+                "code":"BT",
+                "injectionSchedule":"Cho trẻ uống 2 liều khi trẻ từ 2 đến 5 tuổi (tại các vùng có nguy cơ dịch), lần 2 sau lần 1 hai tuần."
+            }
+        },
+        {
+            "type":"diseases",
+            "properties": {
+                "name":"Thương hàn",
+                "description":"Là sự nhiễm khuẩn Salmonella ở bao tử và ruột. Bệnh này tương tự như viêm dạ dày. Phần lớn bệnh nhân bị nhiễm trùng nhẹ sẽ khỏe hơn sau 4 đến 7 ngày mà không cần điều trị. Bệnh dịch có thể xảy ra khi nhiều người cùng ăn thức ăn nhiễm khuẩn (như ăn cùng một nhà hàng). Một số người bị tiêu chảy nặng phải nhập viện để truyền nước biển và kháng sinh. Triệu chứng chính của thương hàn là tiêu chảy. Triệu chứng có thể nhẹ, đi tiêu có thể có phân lỏng từ 2 đến 3 lần mỗi ngày. Triệu chứng này cũng có thể nặng kèm theo tiêu chảy nước sau mỗi 10 hoặc 15 phút. Ngoài ra, còn có một số triệu chứng khác như máu trong phân, co thắt dạ dày, nôn mửa, sốt và nhức đầu. Bạn có thể bị nhiễm thương hàn do ăn thức ăn nhiễm khuẩn, nhất là trứng, thịt bò, gia cầm, trái cây hoặc uống nước hay sữa nhiễm khuẩn. Nấu chín thực phẩm giúp giảm bớt nguy cơ rủi ro nhiễm khuẩn nhưng không hoàn toàn loại trừ nguy cơ nhiễm khuẩn. Thương hàn có thể lây lan từ người sang người khi họ không rửa tay sạch sau khi đi vệ sinh. Thương hàn cũng có thể lây nhiễm sang người từ thú nuôi như rùa và kỳ nhông. Hơn nữa, trẻ em nhỏ, người lớn tuổi và người có hệ miễn dịch suy yếu thường dễ mắc thương hàn. Tỉ lệ người mắc bệnh thương hàn ở những nước kém phát triển thường cao hơn nhiều so với những nước phát triển.",
+                "code":"BTH",
+                "injectionSchedule":"Tiêm một mũi duy nhất cho trẻ 3 đến 10 tuổi (ở các vùng có nguy cơ dịch cao)."
+            } 
+        },
+        {
+            "type":"vaccine",
+            "properties": {
+                "name":"Lao (BCG)",
+                "definition":"Vắc xin BCG để phòng bệnh lao ở trẻ.\nVắc xin BCG có dạng bột và có dung môi pha hồi chỉnh kèm theo. Trước khi sử dụng phải hòa tan vắc xin với dung môi đi kèm. Sau khi pha hồi chỉnh, nó phải được bảo quản ở nhiệt độ 2°C đến 8°C. Phần vắc xin còn lại trong lọ sau mỗi buổi tiêm chủng hoặc sau 6 giờ phải hủy bỏ.",
+                "code":"VCBCG",
+                "after_injection_reaction":"Phần lớn trẻ em đều có phản ứng tại chỗ tiêm. Thông thường, ngay sau khi tiêm vắc xin BCG, thường xuất hiện nốt nhỏ tại chỗ tiêm và biến mất sau 30 phút. Sau khoảng 2 tuần, xuất hiện một vết loét đỏ có kích thước bằng đầu bút chì. Sau đó 2 tuần, vết loét tự lành để lại một sẹo nhỏ có đường kính 5mm. Điều đó chứng tỏ trẻ đã có miễn dịch.\nNhững phản ứng khác:\nSưng hoặc áp-xe. Có thể nổi hạch ở nách hoặc khuỷu tay, một số trường hợp dẫn đến áp-xe. Nổi hạch hoặc áp-xe thường xảy ra do sử dụng bơm kim tiêm không vô trùng hoặc tiêm quá nhiều vắc xin, phổ biến nhất là thay vì tiêm trong da thì lại tiêm dưới da.\nCó rất ít phản ứng nặng sau tiêm BCG. Có khoảng 1/1.000.000 trường hợp bị nhiễm lao sau tiêm BCG, hay xảy ra ở những trường hợp nhiễm HIV hoặc những trường hợp thiếu hụt miễn dịch nặng."
+            }
+        },
+        {
+            "type":"vaccine",
+            "properties": {
+                "name":"Viêm gan B",
+                "definition":"Vắc xin viêm gan B có dạng dung dịch đóng lọ 1 liều hoặc 2 liều hoặc trong bơm kim tiêm tự khóa.\nVì vắc xin viêm gan B chỉ chứa duy nhất 1 loại kháng nguyên nên người ta còn gọi nó là vắc xin đơn giá. Ngoài ra nó cũng có thể được kết hợp với các vắc xin khác để tạo thành vắc xin phối hợp như DPT-VGB (viêm gan B kết hợp với DPT), DPT-VG B+Hib (vắc xin viêm gan B kết hợp với DPT và vắc xin Hib).\nTuy nhiên chỉ có loại vắc xin viêm gan B đơn giá mới được sử dụng tiêm cho trẻ ngay sau khi sinh. Những loại vắc xin phối hợp chỉ sử dụng cho những liều sau.\nNếu để lọ vắc xin viêm gan B trong thời gian dài sẽ thấy lọ vắc xin sẽ chia thành 2 phần dung dịch và phần lắng cặn ở dưới đáy lọ. Do đó phải lắc kỹ trước khi sử dụng. Vắc xin viêm gan B không được để đông băng. Thử nghiệm “Lắc” sẽ xác định xem vắc xin có bị đông băng không? Nếu vắc xin đã bị đông băng phải hủy bỏ.",
+                "code":"VCVIEMGANB",
+                "after_injection_reaction":"Vắc xin viêm gan B là một trong những vắc xin an toàn nhất.\nNhững phản ứng nhẹ có thể gặp:\nCó khoảng 15% người lớn và 5% trẻ nhỏ cảm thấy đau, đỏ hoặc sưng nhẹ tại chỗ tiêm.\nSốt. Khoảng 1% đến 6% có biểu hiện sốt nhẹ từ 1 đến 2 ngày sau tiêm.\nDị ứng cũng như những biến chứng do vắc xin này là rất hiếm phản ứng dị ứng như nổi ban, khó thở chiếm tỷ lệ khoảng 1/600.000 liều. Không có trường hợp tử vong nào được báo cáo."
+            }
+        },
+        {
+            "type":"vaccine",
+            "properties": {
+                "name":"Bại liệt uống (OPV)",
+                "definition":"Vắc xin bại liệt uống được đóng gói dưới dạng dung dịch dưới 2 hình thức:\nỐng vắc xin nhỏ bằng nhựa\nLọ thủy tinh và ống nhỏ giọt được đựng trong 1 túi riêng.\nTháng 7 năm 2003, Tổ chức Y tế Thế giới (WHO) không khuyến nghị sử dụng vắc xin bại liệt tiêm (IPV) riêng lẻ hoặc phối hợp ở những nước đang phát triển vì một số lý do: những thông tin chưa rõ ràng liên quan đến đáp ứng miễn dịch với IPV khi tiêm vào lúc mới sinh, theo lịch tiêm chủng của chương trình tiêm chủng mở rộng, vi rút bại liệt hoang dại tiếp tục lưu hành trong 2 lục địa, chi phí cao và sự phức tạp trong quá trình thực hiện vì nó đòi hỏi bơm kim tiêm đi kèm trong khi đó vắc xin OPV đơn giản chỉ là uống.",
+                "code":"VCOPV",
+                "after_injection_reaction":"OPV rất ít có phản ứng phụ. Chỉ có khoảng dưới 1% tổng số người uống vắc xin có biểu hiện đau đầu, tiêu chảy hoặc đau cơ.\nNguy cơ về liệt do vắc xin (VAPP) là rất nhỏ, với tỷ lệ khoảng 2 đến 4 trường hợp/1 triệu trẻ được uống vắc xin."
+            }
+        },
+        {
+            "type":"vaccine",
+            "properties": {
+                "name":"Quinvaxem (5 trong 1)",
+                "definition":"Vắc xin Quinvaxem còn gọi là vắc xin “5 trong 1” là vắc xin phối hợp gồm giải độc tố vi khuẩn bạch hầu, uốn ván, vi khuẩn ho gà bất hoạt, kháng nguyên vi rút viêm gan B và kháng nguyên vi khuẩn Haemophilus influenzae type b (Hib).\nVắc xin Quinvaxem phòng được các bệnh: bạch hầu, uốn ván, ho gà, viêm gan B và viêm phổi, viêm màng não do vi khuẩn Hib.",
+                "code":"VCQUINVAXEM",
+                "after_injection_reaction":"Một số phản ứng có thể gặp khi sử dụng vắc xin Quinvaxem cũng giống như sử dụng vắc xin DPT có thành phần ho gà toàn tế bào như:\n- Khóc thét dai dẳng trên3 giờ trong vòng 48 giờ sau tiêm vắc xin với tỷ lệ là <1/100 liều sử dụng.\n- Co giật có kèm theo sốt hoặc không sốt trong vòng 3 ngày sau tiêm vắc xin với tỷ lệ là <1/100 liều sử dụng.\n- Giảm trương lực cơ, giảm đáp ứng xảy ra trong vòng 48 giờ với tỷ lệ là 1-2/1 triệu liều.\n- Sốc phản vệ có thể xảy ra với tỷ lệ 20/1 triệu liều."
+            }
+        },
+        {
+            "type":"vaccine",
+            "properties": {
+                "name":"Sởi",
+                "definition":"Vắc xin sởi được đóng gói dưới dạng đông khô kèm theo dung môi pha hồi chỉnh. Vắc xin cần pha hồi chỉnh trước khi sử dụng (xem Bài 6). Chỉ sử dụng dung môi được cấp cùng với vắc xin. Vắc xin sởi sau khi pha hồi chỉnh vẫn phải bảo quản ở nhiệt độ từ 2°C đến 8°C. Hủy bỏ vắc xin còn trong lọ sau 6 giờ hoặc sau mỗi buổi tiêm chủng.\nỞ những nước có tình trạng thiếu hụt Vitamin A, việc bổ sung Vitamin A thường được thực hiện cùng thời gian với việc tiêm vắc xin. Ở một số nước, sử dụng vắc xin phối hợp như sởi - quai bị (MR), sởi - quai bị - rubella (MMR).",
+                "code":"VCSOI",
+                "after_injection_reaction":"Những phản ứng nhẹ do vắc xin thường ít gặp, có thể là:\nĐau nhức. Một vài trẻ có thể cảm thấy đau tại nơi tiêm trong 24 giờ sau tiêm. Phần lớn phản ứng này sẽ mất đi trong vòng 2 đến 3 ngày mà không cần phải điều trị gì.\nSốt. Khoảng 5% trẻ có biểu hiện sốt sau khi tiêm 5 đến 12 ngày và sốt kéo dài 1 đến 2 ngày.\nBan. Khoảng 1/20 trẻ có biểu hiện ban nhẹ trong khoảng 5 đến 12 ngày sau tiêm. Ban cũng thường kéo dài khoảng 2 ngày.\nNhững phản ứng nặng hiếm gặp; ước tính có khoảng 1 trường hợp bị quá mẫn với vắc xin trên 1.000.000 liều vắc xin; 1 trường hợp dị ứng trên 100.000 liều vắc xin và 1 trường hợp giảm tiểu cầu trên 30.000 liều vắc xin được tiêm. Viêm não cũng đã được ghi nhận là có khoảng 1 trên 1 triệu liều vắc xin được tiêm. Tuy nhiên trong những trường hợp đó, không có chứng cứ chứng tỏ nguyên nhân là do vắc xin."
+            }
+        },
+        {
+            "type":"vaccine",
+            "properties": {
+                "name":"Tiêm nhắc bạch hầu, uốn ván và ho gà (DPT)",
+                "definition":"Vắc xin bạch hầu-ho gà-uốn ván được làm từ giải độc tố bạch hầu, giải độc tố uốn ván và vắc xin ho gà. Đây là vắc xin dạng dung dịch. Nếu để lọ vắc xin thẳng đứng trong 1 thời gian dài, những hạt nhỏ mịn có thể lắng xuống dưới đáy trông giống như dải cát mịn dưới đáy lọ. Chính vì vậy mà trước khi sử dụng phải lắc lọ để trộn đều vắc xin.\nKhông được để đông băng vắc xin DPT. Thử nghiệm “Lắc” sẽ xác định xem vắc xin có bị hỏng bởi đông băng không. Nếu thử nghiệm lắc cho thấy vắc xin bị đông băng thì vắc xin đó nhất thiết phải bị hủy bỏ.",
+                "code":"VCDPT",
+                "after_injection_reaction":"Những phản ứng sau khi tiêm DPT thường nhẹ. Thường gặp là:\nSốt. Có thể tới một nửa số trẻ em sau tiêm DPT bị sốt vào buổi tối. Sốt có thể hết sau 1 ngày. Cần lưu ý là sốt xuất hiện sau 24 giờ có thể không phải là do phản ứng đối với vắc xin DPT. Cho trẻ uống paracetamol hoặc một vài loại thuốc hạ sốt thích hợp ngay sau khi tiêm và sau 4 đến 8 tiếng sẽ có tác dụng giảm sốt cũng như những phản ứng tại chỗ.\nĐau nhức. Có thể tới một nửa số trẻ có thể bị đau, nổi ban, sưng tại chỗ tiêm.\nQuấy khóc hơn 3 tiếng đồng hồ thường do đau, có thể gặp trên 1% số trẻ.\nNhững phản ứng nghiêm trọng hơn như co giật (thường liên quan tới sốt, chiếm tỷ lệ 1/12.500 liều được tiêm) và giảm trương lực cơ (chiếm tỷ lệ 1/1.750 liều được tiêm). Phản ứng quá mẫn thường hiếm gặp.\nKhông có bằng chứng nào cho thấy vắc xin DPT là nguyên nhân gây nên những rối loạn thần kinh nghiêm trọng, ví dụ như viêm não."
+            }
+        },
+        {
+            "type":"vaccine",
+            "properties": {
+                "name":"Viêm não Nhật Bản (JE)",
+                "definition":"Là vắc xin bất hoạt được sản xuất từ não chuột gây nhiễm với vi rút Viêm não Nhật Bản chủng Nakayama. Vắc xin dạng dung dịch đóng lọ 10 liều.\nVắc xin được bảo quản ở nhiệt độ từ 2ºC đến 8°C, không được để đông băng vắc xin.",
+                "code":"VCJE",
+                "after_injection_reaction":"Phản ứng nhẹ có thể gặp:\nĐau nhức. Một số ít trường hợp có thể đau, sưng nhẹ tại chỗ tiêm.\nSốt, đau đầu, buồn nôn, đau cơ thường ít gặp."
+            }
+        },
+        {
+            "type":"vaccine",
+            "properties": {
+                "name":"Tả",
+                "definition":"Vắc xin tả uống được điều chế từ các chủng vi khuẩn tả thuộc týp sinh học cổ điển và chủng mới O139. Đây là vắc xin toàn thân vi khuẩn đã được bất hoạt.\nVắc xin dạng dung dịch được sử dụng theo đường uống. Khi để lọ vắc xin  thẳng đứng trong thời gian dài, các vi khuẩn bị lắng xuống dưới đáy lọ, do vậy khi sử dụng phải lắc lọ để trộn đều vắc xin. Vắc xin được bảo quản  ở nhiệt độ từ 2ºC đến 8°C, không được để đông băng vắc xin.",
+                "code":"VCTA",
+                "after_injection_reaction":"Sau uống vắc xin tả thường không có phản ứng phụ.\nPhản ứng hay gặp là cảm giác buồn nôn.\nKhông có bằng chứng nào cho thấy vắc xin tả uống có thể gây bệnh tả."
+            }
+        },
+        {
+            "type":"vaccine",
+            "properties": {
+                "name":"Thương hàn",
+                "definition":"Vắc xin thương hàn được làm từ polysaccharide của vỏ vi khuẩn thương hàn Salmonella typhi.\nVắc xin dạng dung dịch đóng lọ 20 liều. Vắc xin được bảo quản ở nhiệt độ từ 2ºC đến 8°C, không được để đông băng vắc xin.",
+                "code":"VCTHUONGHAN",
+                "after_injection_reaction":"Những phản ứng nhẹ có thể gặp:\nTại nơi tiêm có sưng nề nhẹ và hết trong vòng 24 giờ đầu.\nMột số trường hợp có sốt nhẹ, hiếm có trường hợp sốt cao trên 39ºC. Triệu chứng sốt nhẹ thường hết sau 24 giờ kể từ khi tiêm vắc xin."
+            }
+        },
+        {
+            "type":"vaccine",
+            "properties": {
+                "name":"Sởi - Rubella",
+                "definition":"Vắc xin Sởi – Rubella là vắc xin phối hợp để phòng đồng thời hai bệnh Sởi và bệnh Rubella. Đây là vắc xin sống, giảm độc lực.\nVắc xin được đóng gói dạng bột đông khô, có màu vàng trắng kèm theo lọ dung dịch pha hồi chỉnh. Vắc xin phối hợp Sởi – Rubella phải được pha hồi chỉnh trước khi sử dụng. Vắc xin đóng gói dưới dạng lọ thủy tinh 10 liều/lọ. Dung môi được đóng 5ml/lọ.\nChỉ sử dụng loại dung môi đi kèm với lọ vắc xin để pha hồi chỉnh vắc xin. Tuyệt đối không sử dụng dung môi của nhà sản xuất khác để pha với vắc xin Sởi – Rubella cũng như không dùng nước cất để pha hồi chỉnh. Sử dụng dung môi không đúng có thể làm mất hiệu lực vắc xin và gây ra những phản ứng nghiêm trọng sau tiêm vắc xin. Không bao giờ được làm đông băng dung môi.",
+                "code":"VCSOIRUBELLA",
+                "after_injection_reaction":"Các phản ứng nhẹ có thể gặp là:\nVắc xin Sởi có thể gây ra sưng đau nhẹ tại chỗ tiêm trong vòng 24 giờ sau tiêm chủng. Hầu hết các trường hợp tự khỏi trong vòng 2 - 3 ngày mà không cần chăm sóc y tế. Sốt nhẹ chiếm 5 - 15% sau khi tiêm và kéo dài trong 1 - 2 ngày. Phát ban xảy ra trong khoảng 2% người được tiêm, thường bắt đầu từ 7-10 ngày sau khi tiêm và kéo dài 2 ngày. Các tác dụng phụ nhẹ xảy ra ít hơn ở liều tiêm thứ 2. Viêm não đã được báo cáo sau khi tiêm vắc xin Sởi với tỷ lệ khoảng 1/1triệu trường hợp tiêm mặc dù chưa chứng minh được mối liên quan.\nVắc xin Rubella chủ yếu gây ra các dấu hiệu ở khớp như đau khớp (25%), viêm khớp (10%) ở trẻ vị thành niên và phụ nữ, thường kéo dài từ vài ngày đến 2 tuần. Phản ứng này rất hiếm ở trẻ em và ở nam giới tiêm vắc xin Sởi - Rubella (0 - 3%).\nSốt nhẹ và phát ban, nổi hạch, đau cơ, dị cảm là những triệu chứng thường được báo cáo.\nMột số phản ứng nặng hiếm gặp:\nGiảm tiểu cầu là dấu hiệu rất hiếm với tỷ lệ báo cáo dưới 1/30.000 liều dùng.\nSốc phản vệ cũng rất hiếm gặp. Vắc xin rất hiếm khi gây ra phản ứng dị ứng như nổi mề đay, ngứa, phát ban dị ứng trong vòng 24 giờ sau tiêm chủng."
+            }
+        },
+        {
+            "type":"childcare",
+            "properties": {
+                "title":"3 tháng cuối thai kỳ",
+                "content":"Trong tháng thứ 7 và thứ 8, bạn nên đi khám thai thường xuyên hơn, mỗi tháng một lần. Trong tháng thứ 9 bạn nên đi khám 2 tuần một lần để bác sĩ hoặc nữ hộ sinh theo dõi tình trạng của bạn, đảm bảo thai kì tiến triển bình thường.",
+                "note":"Bạn cần ăn uống tốt để đảm bảo cả bạn và thai nhi khỏe mạnh.\n\n 0x1F342 Bạn cần ăn đầy đủ nhiều nhóm thực phẩm đa dạng đảm bảo đủ dinh dưỡng. Mỗi ngày bạn cần ăn thêm một bữa hoặc ăn thêm tương đương 1 đến 2 bát cơm và thức ăn hợp lý.\n 0x1F342 Bạn cũng cần ăn thêm nhiều hoa quả, rau củ và đậu đỗ để bổ sung chất xơ.\n 0x1F342 Bạn cần uống nước đầy đủ, ít nhất là 8 ly (cốc) mỗi ngày.  Ngoài ra bạn có thể bổ sung thêm các loại thức uống dinh dưỡng khác nhau như sữa đậu nành, nước trái cây.\n\nĂn các thức ăn giàu sắt gồm thịt, cá, nội tạng (tim, gan, cật…), trứng, trái cây khô, ngũ cốc, bánh mì và rau xanh.\n\nUống viên sắt và axit folic: Thời gian tốt nhất để uống là vào mỗi buổi tối, sau bữa ăn để tránh tác dụng phụ. Sắt giúp tang ô-xy trong hồng cầu mẹ, giúp cho sự phát triển não bộ của thai nhi. Thiếu dắt dẫn đến nguy cơ thiếu máu, khiến bạn mệt mỏi và chóng mặt. Bạn hãy tiếp tục uống viên sắt ít nhất cho đến một tháng sau khi sinh."
+            }
+        },
+        {
+            "type":"childcare",
+            "properties": {
+                "title":"Sữa mẹ được sinh ra như thế nào?",
+                "content":"0x1F338 Sữa mẹ được sinh ra trong cơ thể người mẹ từ khi mang thai. Khi bé chào đời, cơ thể bạn đã người mẹ đã sẵn sang để cung cấp nguồn dinh dưỡng cần thiết cho bé.\n 0x1F338 Sữa mẹ được tiết ra nhờ 1 phản xạ nội tiết. Khi trẻ bú, ngậm và mút vú mẹ, tín hiệu sẽ được truyền tới não người mẹ phản xạ để cở thể mẹ sản xuất và tiết ra sữa. Vì vậy, khi bé càng bú mẹ nhiều, sữa mẹ càng tiết ra nhiều hơn và khi bé bú càng sớm thì sữa về càng sớm.\n 0x1F338 Vì vậy, việc cho bé bú ngay trong vòng 1 giờ đầu tiên sau khi sinh là rất quan trọng. Trước hết việc tiếp xúc da-kề-da với mẹ giúp trẻ ổn định nhiệt độ cơ thể, nhịp thở và đường máu, đồng thời kích thích sự phát triển não bộ của trẻ. Cho trẻ các đồ uống khác (sữa bột, mật ong, nước…) có thê làm trẻ bị tiêu chảy và gặp nguy hiểm cho trẻ.\n 0x1F338 Bạn đừng lo mình không có đủ sữa trong ngày đầu tiên. Bạn hoàn toàn có khả năng tiết đủ sữa để đáp ứng nhu cầu của bé. Trong 2 ngày đầu, bé chỉ cần 5-7ml sữa mỗi lần bú (tương đương 1 quả nho cỡ nhỏ).\n 0x1F338 Trong ngày đầu tiên, khi bé bú đủ thì bé sẽ đi tiểu 1-2 lần một ngày và nước tiểu màu vàng nhạt. Sau 2 ngày, khi sữa mẹ về nhiều, số lần đi tiểu sẽ tăng lên từ 6-8 lần một ngày.\n 0x1F338 Nếu bạn cho bé bú sữa ngoài (sữa bột) hoặc ăn các loại thức ăn khác, bé sẽ không thích bú mẹ nữa điều này sẽ làm bạn hạn chế quá trình tạo sữa. Hãy nhớ, bé càng ngậm vú mẹ, mút/bú càng nhiều thì sữa mẹ càng được tạo ra nhiều bạn nhé.",
+                "note":""
+            }
+        },
+        {
+            "type":"childcare",
+            "properties": {
+                "title":"Sữa non là gì và khi nào sữa non sẽ chuyển thành sữa trưởng thành?",
+                "content":"0x1F4AE Sữa non là những giọt sữa đầu tiên có trong bầu vú mẹ khi mang thai và chỉ được tiết ra trong vòng vài ngày đầu sau khi sinh.\n 0x1F4AE Sữa non rất quý vì giàu vitamin như Vitamin A kháng thể. Những chất này có hàm lượng cao nhất ngay sau khi sinh, vì vậy cần cho bé bú càng sớm càng tốt, tốt nhất là trong vòng một giờ sau khi sinh.\n 0x1F4AE Sữa non giống như liều vắc-xin đầu tiên giúp bảo vệ bé khỏi bị nhiễm trùng  -  không có gì có thể thay thế được sữa non. Bạn đừng vắt bỏ bất kỳ giọt sữa non nào bạn nhé.\n 0x1F4AE Sữa non còn có tác dụng làm sạch dạ dày con bạn và giúp bé thải phân su.\n 0x1F4AE Dạ dày trẻ mới sinh còn rất non nớt, bạn đừng cho bé uống bất cứ thứ gì khác như nước, mật ong,… vì chúng có thể làm bé bị tiêu chảy và gây nguy hiểm cho bé.\n 0x1F4AE Dạ dày của trẻ nhỏ nên bé rất nhanh no nếu ta cho trẻ uống các chất khác – khi đó bé sẽ không bú mẹ nữa và không nhận được lợi ích từ sữa non nữa.\nTrong khoảng 2 đến 5 ngày sau khi sinh, một lượng lớn sữa chuyển tiếp sẽ được cơ thể bạn tiết ra thay thế sữa non. Sữa chuyển tiếp béo và sệt hơn, được tiết ra sau sữa non cho đến 10-14 ngày sau khi sinh. Bầu ngực của bạn sẽ to ra và trở nên cứng hơn do phải sản xuất ra một lượng sữa chuyển tiếp nhiều hơn rất nhiều so với sữa non trước đó. Cảm giác căng đầy nặng nè này có thể khiến bạn và bé cảm thấy khó chịu. Có thể bé sẽ thấy khó khăn hơn khi ngậm bắt bú. Tuy nhiên bạn hãy tiếp tục cho bé bú, nhờ đó trẻ sẽ học cách ngậm bắt vú tốt hơn và cho trẻ bú liên tục cũng giúp giảm cảm giác căng tức ngực.\n Khoảng gần hai tuần sau khi sinh, cơ thể bạn sẽ bắt đầu sản xuất ra sữa trưởng thành. Sữa trưởng thành gồm 2 loại: sữa đầu và sữa cuối. Sữa đầu được tiết ra trước, chứa nhiều nước giúp bé không bị ngạt. Sữa cuối được tiết ra sau, có màu hơi đục và chứa nhiều chất béo hơn (nhiều năng lượng hơn) giúp bé không bị đói. Khi cho con bú, bạn hãy cho bé bú hết một bên vú trước khi chuyển sang bên kia. Việc cho con bạn bú cả sữa đầu và sữa cuối là cực kỳ quan trọng để đảm bảo bé nhận được đầy đủ dưỡng chất cần thiết và giúp bé no lâu hơn.",
+                "note":""
+            }
+        },
+        {
+            "type":"childcare",
+            "properties": {
+                "title":"Cho trẻ bú sữa mẹ hoàn toàn trong vòng 6 tháng đầu",
+                "content":"Trong 6 tháng đầu (180 ngày) , con bạn chỉ cần bú sữa mẹ, không cần bất cứ gì khác.\n 0x1F342 Không cần nước: Vì 88% sữa mẹ là nước nên bé không cần uống thêm nước. Ngay cả khi trời nóng, sữa mẹ cũng vẫn có đủ nước giúp bé hết khát.\n 0x1F342 Không cần sữa bột: Vì hệ tiêu hóa của bé còn yếu nên chỉ thích hợp tiêu hóa sữa mẹ.\n 0x1F342 Không cần thức ăn khác: Vì sữa mẹ có đủ các chất dinh dưỡng mà con bạn cần để giúp bé phát triển tối ưu cả về thể chất và trí tuệ.",
+                "note":"Sau khi cho bé bú, ôm bé vào ngực, giữ bé thẳng đứng, vỗ và xoa lưng trẻ nhẹ nhàng nhưng cũng đủ mạnh để bé ợ ra. Trẻ dễ bị đau bụng do đầy hơi. Nếu không được ợ ra sẽ làm trẻ đau bụng về sau."
+            }
+        },
+        {
+            "type":"childcare",
+            "properties": {
+                "title":"Cách cho con bú",
+                "content":"Cho trẻ bú mẹ là một kĩ năng nên các bà mẹ trẻ thường có thể thấy khó khăn, lúng túng trong thời gian đầu. Khi cho bé bú, hãy chuẩn bị để bạn ngồi hay nằm trong một tư thế thoải mái, bạn được thư giãn và lưng được tựa vững (có thể kê gối, chăn…) và hãy giữ trẻ ở vị trí sao cho:\n 0x1F338 Thân áp sát vào mẹ. \n 0x1F338 Tay và cánh tay bạn phải đỡ toàn thân bé (không chỉ đỡ đầu và vai trẻ). \n 0x1F338 Đầu và thân bé nằm trên một đường thẳng (không cong vẹo, không đầu hơi ngẩng về sau). \n 0x1F338 Mặt bé đối diện với vú mẹ, không nằm ngang ngực hoặc bụng mẹ và bé có thể nhìn thấy mặt bạn.\n\nKhi bé ngậm vú mẹ, bạn hãy để cho: \n 0x1F338Miệng bé mở rộng. \n 0x1F338 Quầng vú phía trên miệng bé còn nhiều hơn phía dưới. \n 0x1F338 Môi dưới của bé hướng ra ngoài. \n 0x1F338 Cằm bé chạm vào vú mẹ.",
+                "note":""
+            }
+        },
+        {
+            "type":"childcare",
+            "properties": {
+                "title":"Sữa mẹ tốt hơn sữa bột",
+                "content":"Sữa mẹ có tất cả các chất dinh dưỡng mà các loại sữa bột có và còn nhiều hơn thế - sữa mẹ có kháng thể giúp bảo vệ bé và các nội tiết tố và các chất men giúp bé phát triển tối ưu.\n 0x1F342 Không một loại sữa bột nào có thế thay thế sữa mẹ - Sữa của bạn dành cho con của bạn.\n 0x1F342 Sữa mẹ đã được tạo ra một cách tự nhiên và vô cùng diệu kỳ với thành phần thay đổi theo thời gian để đáp ứng một cách chính xác nhu cầu của bé. Không có thức ăn hay loại sữa nào có được đặc tính này.\n 0x1F342 Nghiên cứu chỉ ra rằng trẻ được bú sữa mẹ có xu hướng thông minh hơn trẻ được uống sữa bột.\n 0x1F342 Trông sữa mẹ có chứa nhiều chất giúp phát triển não bộ của bé.\n Sữa mẹ chứa docosahexaenoic acid (DHA),  là axit béo omega-3 quan trọng cho sự phát triển não bộ. Trẻ được bú mẹ càng lâu thì được hấp thụ DHA càng cao.\n Sữa mẹ có chứa cholesterol, cần thiết để tạo mô thần kinh giúp não bộ của bé phát triển.\n Sữa mẹ giàu lactose, là chất dinh dưỡng quý giá cho sự phát triển mô của não bộ. Sữa bò cũng có chứa lactose nhưng không nhiều như sữa mẹ. Sữa bột không có lactose khác và sữa đậu nành hoàn toàn không có lactose.\n Taurine, một loại axit amin tìm thấy trong sữa mẹ có vai trò quan trọng trong sự phát triển não bộ. Axit amin này có rất ít trong sữa bò.\n Chính quá trình giao tiếp với bé trong khi cho bé bú cũng có lợi cho sự phát triển não bộ của bé, không giống như việc cho bé bú bình, và quá trình này cũng giúp bé được tiếp xúc da-kề-da với mẹ nhiều hơn.\n Nghiên cứu chỉ ra rằng cho trẻ bú sữa bột có thể để lại hậu quả lâu dài về sau – như béo phì và bệnh mãn tính khác.\n Nuôi con bằng sữa mẹ cũng giúp bảo vệ bạn khỏi các bệnh ung thư như ung thư vú và ung thư buồng trứng.",
+                "note":""
+            }
+        },
+        {
+            "type":"childcare",
+            "properties": {
+                "title":"Cách vắt và bảo quản sữa mẹ",
+                "content":"Nếu bạn phải đi làm trước sáu tháng, bạn có thể thử làm như sau:\n 0x1F342 Cho bé bù càng nhiều càng tốt khi bạn ở nhà, ví dụ như cho bé bú ngay trước khi đi làm và ngay sau khi về nhà.\n 0x1F342 Cho bé bú càng nhiều sữa càng tốt vào ban đêm – vì sữa mẹ sẽ được tiết nhiều hơn. \n 0x1F342 Vắt sữa (cả khi ở nhà và khi đi làm) để con bạn vẫn có sữa bú ngay cả khi bạn không có nhà. \n 0x1F342 Bảo quản sữa ở trong bình kín nhỏ, sạch và nắp đậy. Không đổ đầy bình chứa. Không đổ lẫn sữa mới vắt và sữa đã vắt trước đó. \n 0x1F342 Sữa mẹ có thể bảo quản ở nhiệt độ phòng trong khoảng 3-5 giờ (bảo quản nơi khô ráo, được che đậy kĩ). \n 0x1F342 Nếu có tủ lạnh, hãy bảo quản sữa ở trong ngăn mát (bảo quản được trong 3 ngày) hoặc ngăn đá tủ lạnh (bảo quản đến 6 tháng). Khi lấy ra, không đun sôi mà hãy để bình chứa sữa trong một nồi nước nóng trong vài phút. \n 0x1F342 Đảm bảo bé được cho uống bằng cốc và thìa. Không cho bé bú bình có núm vú vì bé bú từ bình luôn dễ dàng hơn bú mẹ nên sau khi bú bình thì bé sẽ không muốn bú mẹ nữa. Khi bé bú ít hơn thì  sữa mẹ tiết ra ít hơn. Ngoài ra, bình bú với núm vú giả dễ bị nhiểm khuẩn có thể làm bé bị tiêu chảy và mắc một số bệnh khác. \n 0x1F342 Nhớ rửa tay bằng xà phòng trước khi vắt sữa. Đảm bảo tất cả bình chứa và dụng cụ vắt sữa được rửa sạch sẽ.",
+                "note":""
+            }
+        },
+        {
+            "type":"childcare",
+            "properties": {
+                "title":"Cho bé ăn bổ sung",
+                "content":"Khi con bạn tròn 6 tháng tuổi (180 ngày), bắt đầu cho bé ăn thức ăn bổ sung là rất cần thiết để đảm bảo con bạn phát triển, tăng cân và phát triển chiều cao hợp lý.\n\nKhi chế biến và cho bé ăn thức ăn bổ sung, nhớ đảm bảo những điều sau: \n 0x1F342 Số lần: Cho trẻ ăn bổ sung 2-3 bữa/ngày. Xen giữa các bữa chính, bạn cũng cần cho bé ăn thêm 1-2 bữa phụ như hoa quả (giàu vitamin), long đỏ trứng luộc chín kỹ hoặc sữa chua (giàu canxi và dễ tiêu hóa), khoai lang luộc và cà rốt (giàu vitamin A). \n 0x1F342 Số lượng: Khi trẻ được tròn 6 tháng, bắt đầu cho bé ăn 2-3 thì thức ăn mỗi bữa. Tăng dần lên một nửa (1/2) bát 250ml mỗi bữa. \n 0x1F342 Đa dạng: Để phát triển tốt, trẻ cần được ăn nhiều thức ăn khác ngoài gạo. Bạn có thể làm thử theo thực đơn sau:\n + Bột: 2 thìa cà phê (16g) (Bột được trộn từ 1kg gạo với 50g gạo nếp và 50g đỗ xanh hoặc đỗ tương).\n + Nước lọc: ba phần tư một bát con (bát 250ml).\n + Thịt lợn/cá/tôm/thịt gà/thịt bò băm nhuyễn: 2 thìa cà phê (16g).\n + Rau củ nghiền (cà rốt, bí đỏ,…) hoặc rau xanh băm nhuyễn: 2 thìa cà phê (16g).\n + Dầu: Một thìa cà phê (2g).\n + Nước mắm: 1/2 thìa cà phê (nên dùng nước mắm được bổ sung chất sắt). Không nên dùng quá nhiều nước mắm vì không tốt cho bé, có thể gia tăng gia vị bằng cách thêm vừng lạc giã nhuyễn.\n\n Hãy thay đổi các loại rau và các loại tôm/cá/ thịt khác nhau mỗi bữa để làm đa dạng hương vị và kích thích bé ăn nhiều hơn. Hãy nhớ tiếp tục cho trẻ bú mẹ, đặc biệt vào ban đêm vì ở tuổi này (từ 6 đén 9 tháng tuổi).\n\n 0x1F342 Sữa mẹ vẫn cung cấp hơn một nửa nhu cầu dinh dưỡng của bé. \n 0x1F342 Sữa mẹ tiếp tục cung cấp kháng thể bảo vệ bé ngay lập tức và lâu dài. \n 0x1F342 Sữa mẹ đóng vai trò quan trọng trong việc đảm bảo sự phát triển của não bộ và sự hoàn thiện của hệ thống tiêu hóa. \n 0x1F342 Không cần cho trẻ uống loại sữa nào khác nếu bạn vẫn cho bé bú mẹ.\n\n 0x1F338 Độ đậm đặc: Dạ dày của trẻ rất nhỏ, vì vậy bạn cần cho trẻ ăn thức ăn đặc và đủ dinh dưỡng để trẻ có đủ dinh dưỡng để phát triển. Nếu bạn cho trẻ ăn bột quá loãng, trẻ sẽ nhanh no mà không nhận được lượng dinh dưỡng cần thiết.",
+                "note":"Rửa tay trước khi chế biến thức ăn cho bé."
+            }
+        },
+        {
+            "type":"childcare",
+            "properties": {
+                "title":"Số lần, số lượng, độ đặc và độ đa dạng thức ăn cho trẻ từ 9 đến 12 tháng tuổi",
+                "content":"0x1F338 Khi con bạn được 9 tháng, việc tăng số lượng và sự đa dạng của thức ăn là vô cùng quan trọng. \n 0x1F338 Khi chế biến và cho bé ăn thức ăn bổ sung, nhớ đảm bảo những điều sau:\n - Số lần: Cho bé ăn bổ sung 3-4 bữa/ ngày. Xen giữa các bữa chính, bạn cũng cần cho bé ăn thêm 1-2 bữa phụ như hoa quả, long đỏ trứng luộc chín kỹ hoặc sữa chua, khoai lang luộc và cà rốt.\n - Số lượng: Tăng dần lên từ một nửa (1/2) bát đến ba phần tư (3/4) bát 250ml mỗi bữa.\n - Đa dạng: Để phát triển tốt, trẻ cần được ăn nhiều thức ăn khác ngoài gạo. Bạn có thể làm thử theo thực đơn sau:\n + Bột: 2 thìa cà phê (16g) (Bột được trộn từ 1 kg gạo với 50g gạo nếp và 50 đỗ xanh hoặc đỗ tương).\n+ Nước lọc: Ba phần tư bát con (250ml).\n + Thịt lợn/cá/tôm/thịt gà/thịt bò băm nhuyễn: 2 thìa cà phê (16g).\n + Rau củ nghiền (cà rốt, bí đỏ,…) hoặc rau xanh băm nhuyễn: 2 thìa cà phê (16g).\n + Dầu: 1 thài (2g).\n+ Nước mắm: 1/2 thìa cà phê (nên dùng nước mắm bổ sung chất sắt). Không nên dùng quá nhiều nước mắm vì sẽ không tốt cho trẻ, có thể tăng gia vị bằng cách thêm vừng lạc giã nhuyễn.\n + Hãy thay đổi các loại rau khác nhau và các loai tôm/cá/thịt mỗi bữa để làm đa dạng hương vị và kích thích bé ăn nhiều hơn.\n\n 0x1F338 Hãy nhớ tiếp tục cho bé bú mẹ đặc biệt vào ban đêm. Ở tuổi này (9 đến 12 tháng tuổi):\n + Sữa mẹ vẫn cung cấp khoảng một nữa nhu cầu cầu dinh dưỡng của trẻ.\n + Sữa mẹ tiếp tục cung cấp kháng thể bảo vệ trẻ ngay lập tức về lâu dài.\n + Sữa mẹ đóng vai trò quan trọng trong việc đảm bảo sự phát triển của não bộ và sự hoàn thiện của hệ thống tiêu hóa của trẻ.\n + Không cần cho trẻ uống loại sữa nào khác nếu bạn vẫn cho trẻ bú mẹ.",
+                "note":""
+            }
+        },
+        {
+            "type":"childcare",
+            "properties": {
+                "title":"Số lần, số lượng, độ đặc và độ đa dạng thức ăn cho trẻ từ 12 đến 24 tháng tuổi",
+                "content":"0x1F338 Khi con bạn được 1 tuổi, bé đã có thể ăn thức ăn cứng hơn, như thức ăn của người lớn.\n 0x1F338 Khi chế biến và cho bé ăn thức ăn bổ sung, nhớ đảm bảo những điều sau:\n - Số lần: Cho bé ăn bổ sung 3-4 bữa/ ngày. Xen giữa các bữa chính, bạn cũng cần cho bé ăn thêm 1-2 bữa phụ như hoa quả, long đỏ trứng luộc chín kỹ hoặc sữa chua, khoai lang luộc và cà rốt.\n - Số lượng: Ăn ít nhất là ba phần tư (3/4) bát tăng dần lên một (1) bát 250ml mỗi bữa.\n - Đa dạng: Để phát triển tốt, trẻ cần được ăn nhiều thức ăn khác ngoài gạo. Bạn có thể làm thử theo thực đơn sau:\n + Cháo đặc:  3/4 bát cháo đặc tương đương với 5 thìa cà phê gạo (33g).\n+ Nước lọc: Thêm nếu cần thiết.\n + Thịt lợn/cá/tôm/thịt gà/thịt bò băm nhuyễn: 3-4 thìa cà phê (32g).\n + Rau củ nghiền (cà rốt, bí đỏ,…) hoặc rau xanh băm nhuyễn: 3-4 thìa cà phê.\n + Dầu: 2 thìa cà phê (2g).\n+ Nước mắm: 1 thìa cà phê (nên dung nước mắm bổ sung chất sắt). Không nên dung quá nhiều nước mắm vì sẽ không tốt cho trẻ, có thể tăng gia vị bằng cách thêm vừng lạc giã nhuyễn.\n + Hãy thay đổi các loại rau khác nhau và các loai tôm/cá/thịt mỗi bữa để làm đa dạng hương vị và kích thích bé ăn nhiều hơn.\n\n 0x1F338 Hãy nhớ tiếp tục cho bé bú mẹ đặc biệt vào ban đêm. Ở tuổi này (12 đến 24 tháng tuổi):\n + Sữa mẹ vẫn cung cấp khoảng một phần ba nhu cầu cầu dinh dưỡng của trẻ.\n + Sữa mẹ tiếp tục cung cấp kháng thể bảo vệ trẻ ngay lập tức về về lâu dài.\n + Sữa mẹ đóng vai trò quan trọng trong việc đảm bảo sự phát triển của não bộ và sự hoàn thiện của hệ thống tiêu hóa của trẻ.\n + Không cần cho trẻ uống loại sữa nào khác nếu bạn vẫn cho trẻ bú mẹ.",
+                "note":""
+            }
+        },
+        {
+            "type":"childcare",
+            "properties": {
+                "title":"Cho ăn khi trẻ đang bị tiêu chảy",
+                "content":"0x1F4AE Cho bé bú sữa mẹ thường xuyên hơn.\n0x1F4AE Bạn vẫn có thể cho bé ăn bình thường bằng các thức ăn giàu dinh dưỡng và mềm như trứng, thịt, chất béo, dầu như bình thường. Bạn không cần kiêng các loại thực phẩm tanh (như cá) vì chúng vẫn rất tốt cho bé, chỉ cần nấu kỹ. \n 0x1F4AE Cho bé uống đủ nước. Số lượng nước cần cho bé uống sau mỗi lần đi lỏng là:\n + Trẻ dưới 2 tuổi: 50-100ml (1/4-1/2 bát ăn cơm).\n + Trẻ trên 2 tuổi: 100-200ml (1/2-1 bát ăn cơm).",
+                "note":"Một vài loại thức ăn bạn có thể cho bé ăn khi trẻ đang bị tiêu chảy: \n0x1F4AE Sữa mẹ\n 0x1F4AE Chuối\n 0x1F4AE Bánh mì\n 0x1F4AE Cà rốt luộc chín\n 0x1F4AE Khoai tây hay khoai lang luộc\n 0x1F4AE Sữa chua\n 0x1F4AE ...\n\nKhi bé có một trong những dấu hiệu sau đưa bé đến cơ sở ý tế khám ngay: \n 0x1F4AE Trẻ mệt li bì\n 0x1F4AE Trẻ bỏ bú, không bú được\n 0x1F4AE Nôn nhiều\n 0x1F4AETiêu chảy nhiều hơn\n 0x1F4AE Sốt cao\n 0x1F4AE Có máu trong phân\n\n 0x1F338 Trẻ bị nôn: \nRất nhiều cha mẹ lo lắng về vấn đề này khi trẻ bị ốm. Nếu bé chỉ nôn 1-2 lần/ngày và vẫn hiếu động, chạy nhảy bình thường thì bạn chỉ cần cho bé ăn hay bú ngay sau khi nôn để tránh bé bị sụt cân và đói.\n\n 0x1F338 Tẩy giun cho trẻ:\n Khi con bạn được 12 tháng tuổi, tẩy giun cho bé theo chỉ định của bác sĩ. Khi trẻ được 24 tháng tuổi, hãy nhớ tẩy giun cho bé thường xuyên (ít nhất 6 tháng một lần) để đảm bảo bé hấp thu đầy đủ các chất dinh dưỡng mà trẻ nhận được."
+            }
+        },
+        {
+            "type":"childcare",
+            "properties": {
+                "title":"Cho ăn khi trẻ nhiễm khuẩn hô hấp",
+                "content":"Nhiễm khuẩn hô hấp là tình trạng nhiễm vi-rút hoặc vi khuẩn ở đường hô hấp mũi, hầu, họng, thanh khí phế quản. Trẻ có nhiễm khuẩn đường hô hấp thường có các dấu hiệu ho, sốt, chảy nước mũi.\n\n Nếu trẻ có một trong những dấu hiệu sau cần đứa trẻ đến cơ sở ý tế ngay:\n 0x1F4AE Thở nhanh hoặc khó thở. \n 0x1F4AE Ho nhiều. \n 0x1F4AE Co giật. \n 0x1F4AE Sốt cao hoặc thân nhiệt giảm\n 0x1F4AE Ngực trẻ lõm sâu vào khi hít thở. \n 0x1F4AE Trẻ không bú, ăn được.",
+                "note":"0x1F4AE Cho bé uống nhiều nước hơn. \n 0x1F4AE Cho bé ăn thức ăn ấm thay vì lạnh (thức ăn lạnh không  tốt cho trẻ nhiễm khuẩn đường hô hấp). \n 0x1F4AE Cho bé ăn thức ăn dễ tiêu, ngon miệng, giàu dinh dưỡng. \n 0x1F4AE Dùng khăn ấm sạch làm sạch mũi trước khi cho bé ăn. \n 0x1F4AE Nếu bé chán ăn, lượng thức ăn bé hấp thụ sẽ ít hơn bình thường. Vì vậy để tránh bé đói và sụt cân, phải cho bé ăn thường xuyên hơn (chia nhỏ thành nhiều bữa hơn bình thường) và cho bé ăn thức ăn bé thích để kích thích trẻ ăn nhiều hơn. \n 0x1F4AE Khi bị ốm, bé rất yếu và dễ bị nôn. Vì thế nên cho bé ăn chậm hơn bình thường.\n\n Trẻ bị sốt: \n 0x1F4AE Cởi bớt quần áo, để bé ở nơi thoáng mát. \n 0x1F4AE Lau người bé bằng khăn ấm. \n 0x1F4AE Cho bé bú mẹ nhiều hơn. \n 0x1F4AE Cho bé uống thêm nước, nước hoa quả, sữa. \n 0x1F4AE Cho bé ăn nhiều hơn, ăn thức ăn mềm, lỏng, giàu dinh dưỡng và cho ăn thành nhiều bữa nhỏ."
+            }
+        }
+    ]
+}

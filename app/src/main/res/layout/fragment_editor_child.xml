@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/editor_child_nested_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:gravity="center|center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="32dp"
+        android:paddingTop="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/editor_child_img_icon"
+            android:layout_width="@dimen/editor_child_image_size"
+            android:layout_height="@dimen/editor_child_image_size"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/margin_16dp"
+            android:src="@drawable/ic_face_black_24dp" />
+
+        <TextView
+            android:id="@+id/editor_child_txt_add_img_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_16dp"
+            android:text="@string/editor_child_add_image"
+            android:textColor="@color/colorPrimary" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/editor_child_edt_full_name_wrapper"
+            style="@style/TextInputLayoutEditor"
+            app:errorTextAppearance="@style/error">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editor_child_edt_full_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/editor_child_full_name" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/editor_child_edt_tob_wrapper"
+            style="@style/TextInputLayoutEditor">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editor_child_edt_tob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="@string/editor_child_tob" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/editor_child_edt_dob_wrapper"
+            style="@style/TextInputLayoutEditor"
+            app:errorTextAppearance="@style/error">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editor_child_edt_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="@string/editor_child_dob" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/editor_child_sp_gender_wrapper"
+            style="@style/TextInputLayoutEditor"
+            app:errorTextAppearance="@style/error">
+
+            <Spinner
+                android:id="@+id/editor_child_sp_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:spinnerMode="dropdown" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/editor_child_edt_new_born_weight_wrapper"
+            style="@style/TextInputLayoutEditor">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editor_child_edt_new_born_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/editor_child_new_born_weight"
+                android:inputType="numberDecimal" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/editor_child_edt_new_born_height_wrapper"
+            style="@style/TextInputLayoutEditor">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editor_child_edt_new_born_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/editor_child_new_born_height"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/editor_child_edt_present_weight_wrapper"
+            style="@style/TextInputLayoutEditor">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editor_child_edt_present_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/editor_child_present_weight"
+                android:inputType="numberDecimal" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/editor_child_edt_present_height_wrapper"
+            style="@style/TextInputLayoutEditor">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editor_child_edt_present_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/editor_child_present_height"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:gravity="center_vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/item_list_more_information_img_icon"
+        android:layout_width="@dimen/item_list_more_information_image_size"
+        android:layout_height="@dimen/item_list_more_information_image_size"
+        tools:src="@drawable/ic_childcare_1"/>
+
+    <TextView
+        android:id="@+id/item_list_more_information_txt_title"
+        android:textColor="@color/text_color_extra3"
+        android:layout_marginLeft="16dp"
+        android:textSize="@dimen/text_size_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="text demo"/>
+</LinearLayout>
