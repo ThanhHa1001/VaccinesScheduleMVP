@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.pimo.thea.vaccinesschedulemvp.R;
 import com.pimo.thea.vaccinesschedulemvp.data.source.VaccinesScheduleRepository;
 import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalDataSource;
+import com.pimo.thea.vaccinesschedulemvp.data.source.remote.VaccinesScheduleRemoteDataSource;
 
 /**
  * Created by thea on 8/6/2017.
@@ -73,7 +74,9 @@ public class DetailMoreInformationFragment extends Fragment implements DetailMor
         presenter = new DetailMoreInformationPresenter(getContext(),
                 request,
                 objectId,
-                VaccinesScheduleRepository.getInstance(VaccinesScheduleLocalDataSource.getInstance(getContext())),
+                VaccinesScheduleRepository.getInstance(
+                        VaccinesScheduleRemoteDataSource.getInstance(getContext()),
+                        VaccinesScheduleLocalDataSource.getInstance(getContext())),
                 this);
 
     }

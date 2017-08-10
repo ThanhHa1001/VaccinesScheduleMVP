@@ -13,6 +13,7 @@ import android.widget.ScrollView;
 import com.pimo.thea.vaccinesschedulemvp.R;
 import com.pimo.thea.vaccinesschedulemvp.data.source.VaccinesScheduleRepository;
 import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalDataSource;
+import com.pimo.thea.vaccinesschedulemvp.data.source.remote.VaccinesScheduleRemoteDataSource;
 import com.pimo.thea.vaccinesschedulemvp.home.HomeActivity;
 import com.pimo.thea.vaccinesschedulemvp.view.DialogLoading;
 
@@ -34,7 +35,9 @@ public class SplashActivity extends AppCompatActivity implements SplashContract.
         setContentView(R.layout.activity_splash);
 
         presenter = new SplashPresenter(this,
-                VaccinesScheduleRepository.getInstance(VaccinesScheduleLocalDataSource.getInstance(this)),
+                VaccinesScheduleRepository.getInstance(
+                        VaccinesScheduleRemoteDataSource.getInstance(this),
+                        VaccinesScheduleLocalDataSource.getInstance(this)),
                 this);
 
         svUseOfTheTerms = (ScrollView) findViewById(R.id.splash_activity_sv_use_of_the_terms);

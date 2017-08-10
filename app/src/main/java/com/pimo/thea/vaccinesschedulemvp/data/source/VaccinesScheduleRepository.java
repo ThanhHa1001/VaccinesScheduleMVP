@@ -10,6 +10,7 @@ import com.pimo.thea.vaccinesschedulemvp.data.InjSchedule;
 import com.pimo.thea.vaccinesschedulemvp.data.InjVaccine;
 import com.pimo.thea.vaccinesschedulemvp.data.Vaccine;
 import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalDataSource;
+import com.pimo.thea.vaccinesschedulemvp.data.source.remote.VaccinesScheduleRemoteDataSource;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -26,6 +27,8 @@ public class VaccinesScheduleRepository implements VaccinesScheduleDataSource {
 
     private final VaccinesScheduleLocalDataSource localDataSource;
 
+    private final VaccinesScheduleRemoteDataSource remoteDataSource;
+
     private Map<Long, Child> cacheChild;
     private Map<Long, InjSchedule> cacheInjScheduleByChildID;
     private Map<Long, Object> cacheDisease;
@@ -38,13 +41,16 @@ public class VaccinesScheduleRepository implements VaccinesScheduleDataSource {
     private boolean cacheChildcareIsDirty = false;
     private boolean cacheVaccineIsDirty = false;
 
-    private VaccinesScheduleRepository(VaccinesScheduleLocalDataSource localDataSource) {
+    private VaccinesScheduleRepository(VaccinesScheduleRemoteDataSource remoteDataSource,
+                                       VaccinesScheduleLocalDataSource localDataSource) {
+        this.remoteDataSource = remoteDataSource;
         this.localDataSource = localDataSource;
     }
 
-    public static VaccinesScheduleRepository getInstance(VaccinesScheduleLocalDataSource localDataSource) {
+    public static VaccinesScheduleRepository getInstance(VaccinesScheduleRemoteDataSource remoteDataSource,
+                                                         VaccinesScheduleLocalDataSource localDataSource) {
         if (INSTANCE == null) {
-            INSTANCE = new VaccinesScheduleRepository(localDataSource);
+            INSTANCE = new VaccinesScheduleRepository(remoteDataSource, localDataSource);
         }
         return INSTANCE;
     }

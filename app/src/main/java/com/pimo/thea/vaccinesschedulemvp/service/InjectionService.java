@@ -14,6 +14,7 @@ import android.util.Log;
 import com.pimo.thea.vaccinesschedulemvp.R;
 import com.pimo.thea.vaccinesschedulemvp.data.source.VaccinesScheduleRepository;
 import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalDataSource;
+import com.pimo.thea.vaccinesschedulemvp.data.source.remote.VaccinesScheduleRemoteDataSource;
 import com.pimo.thea.vaccinesschedulemvp.detail.injchild.DetailInjCActivity;
 import com.pimo.thea.vaccinesschedulemvp.receiver.InjectionAlarmReceiver;
 
@@ -45,7 +46,9 @@ public class InjectionService extends IntentService {
         sendNotification(contentTextNotification, notificationId);
 
         VaccinesScheduleRepository repository =
-                VaccinesScheduleRepository.getInstance(VaccinesScheduleLocalDataSource.getInstance(this));
+                VaccinesScheduleRepository.getInstance(
+                        VaccinesScheduleRemoteDataSource.getInstance(this),
+                        VaccinesScheduleLocalDataSource.getInstance(this));
 
         repository.updateInjScheduleNotified(notificationId);
 

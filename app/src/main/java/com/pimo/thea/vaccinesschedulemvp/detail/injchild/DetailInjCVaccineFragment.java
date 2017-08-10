@@ -17,6 +17,7 @@ import com.pimo.thea.vaccinesschedulemvp.R;
 import com.pimo.thea.vaccinesschedulemvp.data.InjVaccine;
 import com.pimo.thea.vaccinesschedulemvp.data.source.VaccinesScheduleRepository;
 import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalDataSource;
+import com.pimo.thea.vaccinesschedulemvp.data.source.remote.VaccinesScheduleRemoteDataSource;
 import com.pimo.thea.vaccinesschedulemvp.utils.DateTimeHelper;
 
 import java.util.Calendar;
@@ -68,7 +69,9 @@ public class DetailInjCVaccineFragment extends Fragment implements DetailInjCCon
         super.onViewCreated(view, savedInstanceState);
 
         presenter = new DetailInjCVaccinePresenter(injectionId,
-                VaccinesScheduleRepository.getInstance(VaccinesScheduleLocalDataSource.getInstance(getContext())),
+                VaccinesScheduleRepository.getInstance(
+                        VaccinesScheduleRemoteDataSource.getInstance(getContext()),
+                        VaccinesScheduleLocalDataSource.getInstance(getContext())),
                 this);
 
         txtTitle = (TextView) view.findViewById(R.id.detail_inj_c_vaccine_fragment_txt_title);

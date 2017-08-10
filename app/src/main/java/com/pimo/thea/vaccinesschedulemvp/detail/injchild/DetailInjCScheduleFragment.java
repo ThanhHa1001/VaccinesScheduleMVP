@@ -21,6 +21,7 @@ import com.pimo.thea.vaccinesschedulemvp.R;
 import com.pimo.thea.vaccinesschedulemvp.data.source.VaccinesScheduleRepository;
 import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalContract;
 import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalDataSource;
+import com.pimo.thea.vaccinesschedulemvp.data.source.remote.VaccinesScheduleRemoteDataSource;
 import com.pimo.thea.vaccinesschedulemvp.detail.moreinformation.DetailMoreInformationActivity;
 import com.pimo.thea.vaccinesschedulemvp.detail.moreinformation.DetailMoreInformationFragment;
 import com.pimo.thea.vaccinesschedulemvp.listmoreinformation.ListMoreInformationFragment;
@@ -75,7 +76,9 @@ public class DetailInjCScheduleFragment extends Fragment implements DetailInjCCo
         super.onViewCreated(view, savedInstanceState);
 
         presenter = new DetailInjCSchedulePresenter(injectionId,
-                VaccinesScheduleRepository.getInstance(VaccinesScheduleLocalDataSource.getInstance(getContext())),
+                VaccinesScheduleRepository.getInstance(
+                        VaccinesScheduleRemoteDataSource.getInstance(getContext()),
+                        VaccinesScheduleLocalDataSource.getInstance(getContext())),
                 this);
 
         imgIcon = (ImageView) view.findViewById(R.id.detail_inj_c_schedule_fragment_img_icon);

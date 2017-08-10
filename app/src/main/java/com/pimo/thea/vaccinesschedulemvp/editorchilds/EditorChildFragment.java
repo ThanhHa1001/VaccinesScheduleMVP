@@ -44,6 +44,7 @@ import com.pimo.thea.vaccinesschedulemvp.R;
 import com.pimo.thea.vaccinesschedulemvp.data.source.VaccinesScheduleRepository;
 import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalContract;
 import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalDataSource;
+import com.pimo.thea.vaccinesschedulemvp.data.source.remote.VaccinesScheduleRemoteDataSource;
 import com.pimo.thea.vaccinesschedulemvp.home.HomeActivity;
 import com.pimo.thea.vaccinesschedulemvp.utils.DateTimeHelper;
 import com.pimo.thea.vaccinesschedulemvp.utils.PhotoHelper;
@@ -122,7 +123,9 @@ public class EditorChildFragment extends Fragment implements EditorChildContract
         super.onViewCreated(view, savedInstanceState);
 
         presenter = new EditorChildPresenter(childId,
-                VaccinesScheduleRepository.getInstance(VaccinesScheduleLocalDataSource.getInstance(getContext())),
+                VaccinesScheduleRepository.getInstance(
+                        VaccinesScheduleRemoteDataSource.getInstance(getContext()),
+                        VaccinesScheduleLocalDataSource.getInstance(getContext())),
                 this,
                 getActivity());
 

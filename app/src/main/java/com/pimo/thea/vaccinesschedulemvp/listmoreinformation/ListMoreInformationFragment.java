@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import com.pimo.thea.vaccinesschedulemvp.R;
 import com.pimo.thea.vaccinesschedulemvp.data.source.VaccinesScheduleRepository;
 import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalDataSource;
+import com.pimo.thea.vaccinesschedulemvp.data.source.remote.VaccinesScheduleRemoteDataSource;
 import com.pimo.thea.vaccinesschedulemvp.detail.moreinformation.DetailMoreInformationActivity;
 import com.pimo.thea.vaccinesschedulemvp.home.HomeActivity;
 
@@ -72,7 +73,9 @@ public class ListMoreInformationFragment extends Fragment implements ListMoreInf
         super.onViewCreated(view, savedInstanceState);
 
         presenter = new ListMoreInformationPresenter(requestCode,
-                VaccinesScheduleRepository.getInstance(VaccinesScheduleLocalDataSource.getInstance(getContext())),
+                VaccinesScheduleRepository.getInstance(
+                        VaccinesScheduleRemoteDataSource.getInstance(getContext()),
+                        VaccinesScheduleLocalDataSource.getInstance(getContext())),
                 this);
 
         adapter = new ListMoreInformationAdapter(getContext(), new ArrayList<Object>(0), new View.OnClickListener() {

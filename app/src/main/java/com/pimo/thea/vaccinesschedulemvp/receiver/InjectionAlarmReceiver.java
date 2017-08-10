@@ -15,6 +15,7 @@ import com.pimo.thea.vaccinesschedulemvp.data.InjSchedule;
 import com.pimo.thea.vaccinesschedulemvp.data.source.VaccinesScheduleDataSource;
 import com.pimo.thea.vaccinesschedulemvp.data.source.VaccinesScheduleRepository;
 import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalDataSource;
+import com.pimo.thea.vaccinesschedulemvp.data.source.remote.VaccinesScheduleRemoteDataSource;
 import com.pimo.thea.vaccinesschedulemvp.service.InjectionService;
 import com.pimo.thea.vaccinesschedulemvp.utils.DateTimeHelper;
 
@@ -44,6 +45,7 @@ public class InjectionAlarmReceiver extends WakefulBroadcastReceiver {
 
     public void setAlarmByChildId(final Context context, final String nameChild, long childId) {
         VaccinesScheduleRepository repository = VaccinesScheduleRepository.getInstance(
+                VaccinesScheduleRemoteDataSource.getInstance(context),
                 VaccinesScheduleLocalDataSource.getInstance(context));
         repository.getInjSchedulesByChildId(childId, new VaccinesScheduleDataSource.LoadInjSchedulesByChildIdCallback() {
             @Override
@@ -79,7 +81,9 @@ public class InjectionAlarmReceiver extends WakefulBroadcastReceiver {
 
     public  void setAlarmByInjScheduleId(Context context, long injScheduleId) {
         VaccinesScheduleRepository repository =
-                VaccinesScheduleRepository.getInstance(VaccinesScheduleLocalDataSource.getInstance(context));
+                VaccinesScheduleRepository.getInstance(
+                        VaccinesScheduleRemoteDataSource.getInstance(context),
+                        VaccinesScheduleLocalDataSource.getInstance(context));
 
         final InjSchedule[] injSs = {null};
         final Child[] childs = {null};
@@ -154,6 +158,7 @@ public class InjectionAlarmReceiver extends WakefulBroadcastReceiver {
         }
 
         VaccinesScheduleRepository repository = VaccinesScheduleRepository.getInstance(
+                VaccinesScheduleRemoteDataSource.getInstance(context),
                 VaccinesScheduleLocalDataSource.getInstance(context));
         repository.getInjSchedulesByChildId(childId, new VaccinesScheduleDataSource.LoadInjSchedulesByChildIdCallback() {
             @Override

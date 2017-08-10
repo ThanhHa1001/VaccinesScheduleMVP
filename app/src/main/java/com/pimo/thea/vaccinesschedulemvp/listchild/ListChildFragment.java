@@ -18,6 +18,7 @@ import com.pimo.thea.vaccinesschedulemvp.R;
 import com.pimo.thea.vaccinesschedulemvp.data.Child;
 import com.pimo.thea.vaccinesschedulemvp.data.source.VaccinesScheduleRepository;
 import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalDataSource;
+import com.pimo.thea.vaccinesschedulemvp.data.source.remote.VaccinesScheduleRemoteDataSource;
 import com.pimo.thea.vaccinesschedulemvp.detail.injschedulechild.DetailInjSActivity;
 import com.pimo.thea.vaccinesschedulemvp.detail.injschedulechild.DetailInjSFragment;
 import com.pimo.thea.vaccinesschedulemvp.editorchilds.EditorChildActivity;
@@ -66,8 +67,9 @@ public class ListChildFragment extends Fragment implements ListChildContract.Vie
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        presenter = new ListChildPresenter(
-                VaccinesScheduleRepository.getInstance(VaccinesScheduleLocalDataSource.getInstance(getContext())),
+        presenter = new ListChildPresenter(VaccinesScheduleRepository.getInstance(
+                VaccinesScheduleRemoteDataSource.getInstance(getContext()),
+                VaccinesScheduleLocalDataSource.getInstance(getContext())),
                 this);
 
         rlListChild = (RelativeLayout) view.findViewById(R.id.rl_list_child);

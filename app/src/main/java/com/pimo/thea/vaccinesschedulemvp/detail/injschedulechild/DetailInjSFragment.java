@@ -23,6 +23,7 @@ import com.pimo.thea.vaccinesschedulemvp.data.Child;
 import com.pimo.thea.vaccinesschedulemvp.data.source.VaccinesScheduleRepository;
 import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalContract;
 import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalDataSource;
+import com.pimo.thea.vaccinesschedulemvp.data.source.remote.VaccinesScheduleRemoteDataSource;
 import com.pimo.thea.vaccinesschedulemvp.detail.injchild.DetailInjCActivity;
 import com.pimo.thea.vaccinesschedulemvp.editorchilds.EditorChildActivity;
 import com.pimo.thea.vaccinesschedulemvp.editorchilds.EditorChildFragment;
@@ -88,7 +89,9 @@ public class DetailInjSFragment extends Fragment implements DetailInjSContract.V
 
         presenter = new DetailInjSPresenter(childId,
                 childDob,
-                VaccinesScheduleRepository.getInstance(VaccinesScheduleLocalDataSource.getInstance(getContext())),
+                VaccinesScheduleRepository.getInstance(
+                        VaccinesScheduleRemoteDataSource.getInstance(getContext()),
+                        VaccinesScheduleLocalDataSource.getInstance(getContext())),
                 this,
                 getContext());
 
