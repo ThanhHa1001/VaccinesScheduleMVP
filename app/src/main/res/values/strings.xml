@@ -6,10 +6,13 @@
     <string name="nav_vaccine">Vắc-xin</string>
     <string name="nav_disease">Bệnh truyền nhiễm</string>
     <string name="nav_childcare">Chăm sóc trẻ</string>
+    <string name="nav_health_feed">Sức khỏe của bé</string>
     <string name="nav_information">Thông tin ứng dụng</string>
 
     <string name="editor_child_save">Save</string>
     <string name="editor_child_delete">Delete</string>
+
+    <string name="detail_health_feed_open_web">Open web</string>
 
     <!-- Title toolbar-->
     <string name="home_title_home">Danh sách trẻ</string>
@@ -22,13 +25,17 @@
     <string name="detail_m_i_title_toolbar_disease">Thông tin bệnh truyền nhiễm</string>
     <string name="detail_m_i_title_toolbar_vaccine">Thông tin vắc-xin</string>
     <string name="detail_m_i_title_toolbar_childcare">Thông tin chi tiết</string>
+    <string name="detail_health_feed_title_toolbar">Thông tin chi tiết</string>
 
     <!-- Title tab layout-->
     <string name="detail_inj_child_schedule">Ngày tiêm</string>
     <string name="detail_inj_child_vaccine">Vắc-xin</string>
+
     <!-- Message -->
     <string name="list_child_empty">Danh sách trống\nNhấn nút + để thêm thông tin trẻ</string>
     <string name="editor_child_validate">Bạn hãy nhập đủ các trường bắt buộc - (*)</string>
+    <string name="health_feed_no_internet_connection_notify">Không có kết nối mạng</string>
+    <string name="health_feed_no_internet_connection_action">Hãy kiểm tra lại kết nối của bạn</string>
 
     <!-- Editor child fragment-->
     <!-- choose image-->
@@ -80,6 +87,12 @@
     <string name="detail_m_i_childcare_content">Thông tin cơ bản</string>
     <string name="detail_m_i_childcare_note">Mẹo/ Mách nhỏ</string>
 
+    <!-- Health feed fragment-->
+    <string name="health_feed_retry">Thử lại</string>
+
+    <!-- Detail health feed fragment -->
+    <string name="detail_health_feed_ask">Hỏi</string>
+    <string name="detail_health_feed_answer">Trả lời</string>
 
     <!-- Dialog -->
     <string name="dialog_loading_loading">Đang tải</string>
@@ -149,6 +162,5 @@
         trong ứng dụng này là vô giá trị.</string>
     <string name="onboarding_btn_accept_use_of_the_terms">Đồng ý với điều khoản</string>
     <string name="onboarding_accept_terms_key" translatable="false">accept_terms</string>
-
 
 </resources>

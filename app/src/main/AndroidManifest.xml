@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.pimo.thea.vaccinesschedulemvp">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -32,6 +34,7 @@
         <activity android:name=".detail.injschedulechild.DetailInjSActivity" />
         <activity android:name=".detail.injchild.DetailInjCActivity"/>
         <activity android:name=".detail.moreinformation.DetailMoreInformationActivity"/>
+        <activity android:name=".detail.healthfeed.DetailHealthFeedActivity"/>
         <receiver android:name=".receiver.InjectionAlarmReceiver"/>
         <receiver android:name=".receiver.InjectionBootReceiver"
             android:enabled="false">

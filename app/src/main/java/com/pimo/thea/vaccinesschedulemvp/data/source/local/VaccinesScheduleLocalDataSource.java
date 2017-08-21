@@ -12,6 +12,7 @@ import com.pimo.thea.vaccinesschedulemvp.data.Child;
 import com.pimo.thea.vaccinesschedulemvp.data.ChildInjSchedule;
 import com.pimo.thea.vaccinesschedulemvp.data.Childcare;
 import com.pimo.thea.vaccinesschedulemvp.data.Disease;
+import com.pimo.thea.vaccinesschedulemvp.data.HealthFeed;
 import com.pimo.thea.vaccinesschedulemvp.data.InjSchedule;
 import com.pimo.thea.vaccinesschedulemvp.data.InjVaccine;
 import com.pimo.thea.vaccinesschedulemvp.data.Vaccine;
@@ -26,6 +27,7 @@ import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocal
 import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalContract.DiseaseEntry;
 import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalContract.VaccineEntry;
 import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalContract.ChildcareEntry;
+import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalContract.HealthFeedEntry;
 import com.pimo.thea.vaccinesschedulemvp.utils.DateTimeHelper;
 
 /**
@@ -1218,5 +1220,129 @@ public class VaccinesScheduleLocalDataSource implements VaccinesScheduleDataSour
         } else {
             loadChildInjSchedulesCallback.onChildInjSchedulesLoaded(childInjSchedules);
         }
+    }
+
+    @Override
+    public void getHealthFeeds(int numberPage, boolean isBookmark, LoadHealthFeedsCallback loadHealthFeedsCallback) {
+        // called when isBookmark == true
+        Log.d("VSLocalDataSource", "get health feeds");
+        SQLiteDatabase db = localDbHelper.getReadableDatabase();
+        List<HealthFeed> healthFeeds = new ArrayList<>();
+
+        String[] projection = {
+                HealthFeedEntry.COLUMN_HEALTH_FEED_ID,
+                HealthFeedEntry.COLUMN_HEALTH_FEED_URL,
+                HealthFeedEntry.COLUMN_HEALTH_FEED_TITLE_ASK,
+                HealthFeedEntry.COLUMN_HEALTH_FEED_CONTENT_ASK,
+                HealthFeedEntry.COLUMN_HEALTH_FEED_CONTENT_ANSWER,
+        };
+
+        Cursor c = db.query(HealthFeedEntry.TABLE_NAME,
+                projection,
+                null,
+                null,
+                null,
+                null,
+                null);
+        if (c != null && c.getCount() > 0) {
+            while (c.moveToNext()) {
+                long id = c.getLong(c.getColumnIndexOrThrow(HealthFeedEntry.COLUMN_HEALTH_FEED_ID));
+                String url = c.getString(c.getColumnIndexOrThrow(HealthFeedEntry.COLUMN_HEALTH_FEED_URL));
+                String titleAsk = c.getString(c.getColumnIndexOrThrow(HealthFeedEntry.COLUMN_HEALTH_FEED_TITLE_ASK));
+                String contentAsk = c.getString(c.getColumnIndexOrThrow(HealthFeedEntry.COLUMN_HEALTH_FEED_CONTENT_ASK));
+                String contentAnswer = c.getString(c.getColumnIndexOrThrow(HealthFeedEntry.COLUMN_HEALTH_FEED_CONTENT_ANSWER));
+
+                healthFeeds.add(new HealthFeed(id, url, titleAsk, contentAsk, contentAnswer, true));
+            }
+        }
+
+        if (c != null) {
+            c.close();
+        }
+        db.close();
+
+        if (healthFeeds.isEmpty()) {
+            loadHealthFeedsCallback.onDataHealthFeedsNotAvailable();
+        } else {
+            loadHealthFeedsCallback.onHealthFeedsLoaded(healthFeeds);
+        }
+    }
+
+    @Override
+    public void getHealthFeed(String url, GetHealthFeedCallback getHealthFeedCallback) {
+        SQLiteDatabase db = localDbHelper.getReadableDatabase();
+
+        HealthFeed healthFeed = null;
+
+        String[] projection = {
+                HealthFeedEntry.COLUMN_HEALTH_FEED_ID,
+                HealthFeedEntry.COLUMN_HEALTH_FEED_URL,
+                HealthFeedEntry.COLUMN_HEALTH_FEED_TITLE_ASK,
+                HealthFeedEntry.COLUMN_HEALTH_FEED_CONTENT_ASK,
+                HealthFeedEntry.COLUMN_HEALTH_FEED_CONTENT_ANSWER,
+        };
+        String selection = HealthFeedEntry.COLUMN_HEALTH_FEED_URL + " LIKE ?";
+        String[] selectionArgs = {url};
+
+        Cursor c = db.query(HealthFeedEntry.TABLE_NAME,
+                projection,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null);
+
+        if (c != null && c.getCount() > 0) {
+            c.moveToFirst();
+            long id = c.getLong(c.getColumnIndexOrThrow(HealthFeedEntry.COLUMN_HEALTH_FEED_ID));
+            String titleAsk = c.getString(c.getColumnIndexOrThrow(HealthFeedEntry.COLUMN_HEALTH_FEED_TITLE_ASK));
+            String contentAsk = c.getString(c.getColumnIndexOrThrow(HealthFeedEntry.COLUMN_HEALTH_FEED_CONTENT_ASK));
+            String contentAnswer = c.getString(c.getColumnIndexOrThrow(HealthFeedEntry.COLUMN_HEALTH_FEED_CONTENT_ANSWER));
+
+            healthFeed = new HealthFeed(id, url, titleAsk, contentAsk, contentAnswer, true);
+        }
+
+        if (c != null) {
+            c.close();
+        }
+        db.close();
+
+        if (healthFeed == null) {
+            getHealthFeedCallback.onDataHealthFeedNotAvailable();
+        } else {
+            getHealthFeedCallback.onHealthFeedLoaded(healthFeed);
+        }
+    }
+
+    @Override
+    public long insertHealthFeed(HealthFeed healthFeed) {
+        SQLiteDatabase db = localDbHelper.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(HealthFeedEntry.COLUMN_HEALTH_FEED_URL, healthFeed.getUrl());
+        values.put(HealthFeedEntry.COLUMN_HEALTH_FEED_TITLE_ASK, healthFeed.getTitleAsk());
+        values.put(HealthFeedEntry.COLUMN_HEALTH_FEED_CONTENT_ASK, healthFeed.getContentAsk());
+        values.put(HealthFeedEntry.COLUMN_HEALTH_FEED_CONTENT_ANSWER, healthFeed.getContentAnswer());
+
+        long rowInserted = db.insert(HealthFeedEntry.TABLE_NAME, null, values);
+        db.close();
+        return rowInserted;
+    }
+
+    @Override
+    public void deleteHealthFeed(HealthFeed healthFeed) {
+        SQLiteDatabase db = localDbHelper.getWritableDatabase();
+
+        String selection = HealthFeedEntry.COLUMN_HEALTH_FEED_URL + " LIKE ?";
+        String[] selectionArgs = {healthFeed.getUrl()};
+
+        db.delete(HealthFeedEntry.TABLE_NAME, selection, selectionArgs);
+
+        db.close();
+    }
+
+    @Override
+    public void refreshHealthFeeds(boolean isBookmark) {
+
     }
 }

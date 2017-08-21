@@ -4,6 +4,7 @@ import com.pimo.thea.vaccinesschedulemvp.data.Child;
 import com.pimo.thea.vaccinesschedulemvp.data.ChildInjSchedule;
 import com.pimo.thea.vaccinesschedulemvp.data.Childcare;
 import com.pimo.thea.vaccinesschedulemvp.data.Disease;
+import com.pimo.thea.vaccinesschedulemvp.data.HealthFeed;
 import com.pimo.thea.vaccinesschedulemvp.data.InjSchedule;
 import com.pimo.thea.vaccinesschedulemvp.data.InjVaccine;
 import com.pimo.thea.vaccinesschedulemvp.data.Vaccine;
@@ -15,21 +16,6 @@ import java.util.List;
  */
 
 public interface VaccinesScheduleDataSource {
-
-    // Child
-    interface LoadChildListCallback {
-
-        void onChildLoaded(List<Child> childList);
-
-        void onDataChildNotAvailable();
-    }
-
-    interface GetChildCallback {
-
-        void onChildLoaded(Child child);
-
-        void onDataChildNotAvailable();
-    }
 
     void getChildList(LoadChildListCallback loadChildListCallback);
 
@@ -49,22 +35,6 @@ public interface VaccinesScheduleDataSource {
 
     void refreshChildList();
 
-
-    // Childcare
-    interface LoadChildcaresCallback {
-
-        void onChildcareLoaded(List<Object> childcares);
-
-        void onDataChildcareNotAvailable();
-    }
-
-    interface GetChildcareCallback {
-
-        void onChildcareLoaded(Childcare childcare);
-
-        void onDataChildcareNotAvailable();
-    }
-
     void getChildcares(LoadChildcaresCallback loadChildcaresCallback);
 
     void getChildcare(long childcareId, GetChildcareCallback getChildcareCallback);
@@ -75,22 +45,6 @@ public interface VaccinesScheduleDataSource {
 
     void refreshChildcares();
 
-
-    // Disease
-    interface LoadDiseasesCallback {
-
-        void onDiseaseLoaded(List<Object> objects);
-
-        void onDataDiseaseNotAvailable();
-    }
-
-    interface GetDiseaseCallback {
-
-        void onDiseaseLoaded(Disease disease);
-
-        void onDataDiseaseNotAvailable();
-    }
-
     void getDiseases(LoadDiseasesCallback loadDiseasesCallback);
 
     void getDisease(long diseaseId, GetDiseaseCallback getDiseaseCallback);
@@ -100,22 +54,6 @@ public interface VaccinesScheduleDataSource {
     void updateDisease(Disease disease);
 
     void refreshDiseases();
-
-
-    // Injection schedule
-    interface LoadInjSchedulesByChildIdCallback {
-
-        void onInjSchedulesLoaded(List<InjSchedule> injSchedules);
-
-        void onDataInjScheduleNotAvailable();
-    }
-
-    interface GetInjScheduleCallback {
-
-        void onInjScheduleLoaded(InjSchedule injSchedule);
-
-        void onDataInjScheduleNotAvailable();
-    }
 
     void getInjSchedulesByChildIdAndChildDob(long childId, long childDob, LoadInjSchedulesByChildIdCallback loadInjSchedulesCallback);
 
@@ -133,6 +71,99 @@ public interface VaccinesScheduleDataSource {
 
     void refreshInjSchedules();
 
+    void getInjVaccines(LoadInjVaccinesCallback loadInjVaccinesCallback);
+
+    void getInjVaccine(long injScheduleId, GetInjVaccineCallback getInjVaccineCallback);
+
+    long insertInjVaccine(InjVaccine injVaccine);
+
+    void updateInjVaccine(InjVaccine injVaccine);
+
+    void deleteInjVaccineByInjScheduleId(long injScheduleId);
+
+    void refreshInjVaccines();
+
+    void getVaccines(LoadVaccinesCallback loadVaccinesCallback);
+
+    void getVaccine(long vaccineId, GetVaccineCallback getVaccineCallback);
+
+    long insertVaccine(Vaccine vaccine);
+
+    void updateVaccine(Vaccine vaccine);
+
+    void refreshVaccines();
+
+    void getChildInjScheduleList(LoadChildInjSchedulesCallback loadChildInjSchedulesCallback);
+
+    void getHealthFeeds(int numberPage, boolean isBookmark, LoadHealthFeedsCallback loadHealthFeedsCallback);
+
+    void getHealthFeed(String url, GetHealthFeedCallback getHealthFeedCallback);
+
+    long insertHealthFeed(HealthFeed healthFeed);
+
+    void deleteHealthFeed(HealthFeed healthFeed);
+
+    void refreshHealthFeeds(boolean isBookmark);
+
+    // Child
+    interface LoadChildListCallback {
+
+        void onChildLoaded(List<Child> childList);
+
+        void onDataChildNotAvailable();
+    }
+
+    interface GetChildCallback {
+
+        void onChildLoaded(Child child);
+
+        void onDataChildNotAvailable();
+    }
+
+    // Childcare
+    interface LoadChildcaresCallback {
+
+        void onChildcareLoaded(List<Object> childcares);
+
+        void onDataChildcareNotAvailable();
+    }
+
+    interface GetChildcareCallback {
+
+        void onChildcareLoaded(Childcare childcare);
+
+        void onDataChildcareNotAvailable();
+    }
+
+    // Disease
+    interface LoadDiseasesCallback {
+
+        void onDiseaseLoaded(List<Object> objects);
+
+        void onDataDiseaseNotAvailable();
+    }
+
+    interface GetDiseaseCallback {
+
+        void onDiseaseLoaded(Disease disease);
+
+        void onDataDiseaseNotAvailable();
+    }
+
+    // Injection schedule
+    interface LoadInjSchedulesByChildIdCallback {
+
+        void onInjSchedulesLoaded(List<InjSchedule> injSchedules);
+
+        void onDataInjScheduleNotAvailable();
+    }
+
+    interface GetInjScheduleCallback {
+
+        void onInjScheduleLoaded(InjSchedule injSchedule);
+
+        void onDataInjScheduleNotAvailable();
+    }
 
     // Injection vaccine
     interface LoadInjVaccinesCallback {
@@ -149,19 +180,6 @@ public interface VaccinesScheduleDataSource {
         void onDataInjVaccineNotAvailable();
     }
 
-    void getInjVaccines(LoadInjVaccinesCallback loadInjVaccinesCallback);
-
-    void getInjVaccine(long injScheduleId, GetInjVaccineCallback getInjVaccineCallback);
-
-    long insertInjVaccine(InjVaccine injVaccine);
-
-    void updateInjVaccine(InjVaccine injVaccine);
-
-    void deleteInjVaccineByInjScheduleId(long injScheduleId);
-
-    void refreshInjVaccines();
-
-
     // Vaccine
     interface LoadVaccinesCallback {
 
@@ -177,23 +195,26 @@ public interface VaccinesScheduleDataSource {
         void onDataVaccineNotAvailable();
     }
 
-    void getVaccines(LoadVaccinesCallback loadVaccinesCallback);
-
-    void getVaccine(long vaccineId, GetVaccineCallback getVaccineCallback);
-
-    long insertVaccine(Vaccine vaccine);
-
-    void updateVaccine(Vaccine vaccine);
-
-    void refreshVaccines();
-
     // Child and InjSchedule hava is_notify = 0
-    interface LoadChildInjSchedulesCallback{
+    interface LoadChildInjSchedulesCallback {
 
         void onChildInjSchedulesLoaded(List<ChildInjSchedule> childInjSchedules);
 
         void onDataChildInjScheduleNotAvailable();
     }
 
-    void getChildInjScheduleList(LoadChildInjSchedulesCallback loadChildInjSchedulesCallback);
+    // Health feed
+    interface LoadHealthFeedsCallback {
+
+        void onHealthFeedsLoaded(List<HealthFeed> healthFeeds);
+
+        void onDataHealthFeedsNotAvailable();
+    }
+
+    interface GetHealthFeedCallback {
+
+        void onHealthFeedLoaded(HealthFeed healthFeed);
+
+        void onDataHealthFeedNotAvailable();
+    }
 }

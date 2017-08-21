@@ -32,6 +32,8 @@ public interface HomeContract {
 
         void showListChildcare(Bundle bundle);
 
+        void showHealthFeed();
+
         void showAppInfo();
     }
 
@@ -44,6 +46,8 @@ public interface HomeContract {
         void openViewListDiseases();
 
         void openViewListChildcare();
+
+        void openHealthFeed();
 
         void openViewAppInfo();
     }

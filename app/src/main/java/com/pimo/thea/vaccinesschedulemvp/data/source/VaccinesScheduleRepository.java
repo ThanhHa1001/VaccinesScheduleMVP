@@ -6,6 +6,7 @@ import com.pimo.thea.vaccinesschedulemvp.data.Child;
 import com.pimo.thea.vaccinesschedulemvp.data.ChildInjSchedule;
 import com.pimo.thea.vaccinesschedulemvp.data.Childcare;
 import com.pimo.thea.vaccinesschedulemvp.data.Disease;
+import com.pimo.thea.vaccinesschedulemvp.data.HealthFeed;
 import com.pimo.thea.vaccinesschedulemvp.data.InjSchedule;
 import com.pimo.thea.vaccinesschedulemvp.data.InjVaccine;
 import com.pimo.thea.vaccinesschedulemvp.data.Vaccine;
@@ -34,12 +35,16 @@ public class VaccinesScheduleRepository implements VaccinesScheduleDataSource {
     private Map<Long, Object> cacheDisease;
     private Map<Long, Object> cacheChildcare;
     private Map<Long, Object> cacheVaccine;
+    private Map<String, HealthFeed> cacheHealthFeedFromLocal;
+    private Map<String, HealthFeed> cacheHealthFeedFromRemote;
 
     private boolean cacheChildIsDirty = false;
     private boolean cacheInjSByChildIdIsDirty = false;
     private boolean cacheDiseaseIsDirty = false;
     private boolean cacheChildcareIsDirty = false;
     private boolean cacheVaccineIsDirty = false;
+    private boolean cacheHealthFeedFromLocalIsDirty = false;
+    private boolean cacheHealthFeedFromRemoteIsDirty = false;
 
     private VaccinesScheduleRepository(VaccinesScheduleRemoteDataSource remoteDataSource,
                                        VaccinesScheduleLocalDataSource localDataSource) {
@@ -530,6 +535,110 @@ public class VaccinesScheduleRepository implements VaccinesScheduleDataSource {
         });
     }
 
+    @Override
+    public void getHealthFeeds(int numberPage, boolean isBookmark, final LoadHealthFeedsCallback loadHealthFeedsCallback) {
+        if (isBookmark) {
+            if (cacheHealthFeedFromLocal != null && !cacheHealthFeedFromLocalIsDirty) {
+                loadHealthFeedsCallback.onHealthFeedsLoaded(
+                        new ArrayList<>(cacheHealthFeedFromLocal.values()));
+                return;
+            }
+
+            localDataSource.getHealthFeeds(numberPage, isBookmark, new LoadHealthFeedsCallback() {
+                @Override
+                public void onHealthFeedsLoaded(List<HealthFeed> healthFeeds) {
+                    refreshCacheHealthFeedFromLocal(healthFeeds);
+                    loadHealthFeedsCallback.onHealthFeedsLoaded(healthFeeds);
+                }
+
+                @Override
+                public void onDataHealthFeedsNotAvailable() {
+                    loadHealthFeedsCallback.onDataHealthFeedsNotAvailable();
+                }
+            });
+        } else {
+            if (numberPage == 1) {
+                localDataSource.getHealthFeeds(numberPage, true, new LoadHealthFeedsCallback() {
+                    @Override
+                    public void onHealthFeedsLoaded(List<HealthFeed> healthFeeds) {
+                        refreshCacheHealthFeedFromLocal(healthFeeds);
+                    }
+
+                    @Override
+                    public void onDataHealthFeedsNotAvailable() {
+
+                    }
+                });
+            }
+
+            remoteDataSource.getHealthFeeds(numberPage, isBookmark, new LoadHealthFeedsCallback() {
+                @Override
+                public void onHealthFeedsLoaded(List<HealthFeed> healthFeeds) {
+                    refreshCacheHealthFeedFromRemote(healthFeeds);
+                    loadHealthFeedsCallback.onHealthFeedsLoaded(new ArrayList<>(cacheHealthFeedFromRemote.values()));
+                }
+
+                @Override
+                public void onDataHealthFeedsNotAvailable() {
+                    loadHealthFeedsCallback.onDataHealthFeedsNotAvailable();
+                }
+            });
+        }
+    }
+
+    @Override
+    public void getHealthFeed(final String url, final GetHealthFeedCallback getHealthFeedCallback) {
+        HealthFeed healthFeed = getHealthFeedFromLocalWithUrl(url);
+        if (healthFeed != null) {
+            getHealthFeedCallback.onHealthFeedLoaded(healthFeed);
+            return;
+        }
+
+        remoteDataSource.getHealthFeed(url, new GetHealthFeedCallback() {
+            @Override
+            public void onHealthFeedLoaded(HealthFeed healthFeed) {
+                cacheHealthFeedFromRemote.put(url, healthFeed);
+                getHealthFeedCallback.onHealthFeedLoaded(healthFeed);
+            }
+
+            @Override
+            public void onDataHealthFeedNotAvailable() {
+                getHealthFeedCallback.onDataHealthFeedNotAvailable();
+            }
+        });
+    }
+
+    @Override
+    public long insertHealthFeed(HealthFeed healthFeed) {
+        long healthFeedId = localDataSource.insertHealthFeed(healthFeed);
+        healthFeed.setId(healthFeedId);
+
+        if (cacheHealthFeedFromLocal == null) {
+            cacheHealthFeedFromLocal = new LinkedHashMap<>();
+        }
+        cacheHealthFeedFromLocal.put(healthFeed.getUrl(), healthFeed);
+        cacheHealthFeedFromRemote.put(healthFeed.getUrl(), healthFeed);
+        return healthFeedId;
+    }
+
+    @Override
+    public void deleteHealthFeed(HealthFeed healthFeed) {
+        localDataSource.deleteHealthFeed(healthFeed);
+        String url = healthFeed.getUrl();
+        cacheHealthFeedFromLocal.remove(url);
+        healthFeed.setBookmark(false);
+        cacheHealthFeedFromRemote.put(url, healthFeed);
+    }
+
+    @Override
+    public void refreshHealthFeeds(boolean isBookmark) {
+        if (isBookmark) {
+            cacheHealthFeedFromLocalIsDirty = true;
+        } else {
+            cacheHealthFeedFromRemoteIsDirty = true;
+        }
+    }
+
     private void refreshCacheChild(List<Child> childList) {
         if (cacheChild == null) {
             cacheChild = new LinkedHashMap<>();
@@ -571,6 +680,7 @@ public class VaccinesScheduleRepository implements VaccinesScheduleDataSource {
             return cacheInjScheduleByChildID.get(injScheduleId);
         }
     }
+
 
     private void refreshCacheDisease(List<Object> objects) {
         if (cacheDisease == null) {
@@ -638,4 +748,42 @@ public class VaccinesScheduleRepository implements VaccinesScheduleDataSource {
         }
     }
 
+    private void refreshCacheHealthFeedFromLocal(List<HealthFeed> healthFeeds) {
+        if (cacheHealthFeedFromLocal == null) {
+            cacheHealthFeedFromLocal = new LinkedHashMap<>();
+        }
+        cacheHealthFeedFromLocal.clear();
+        for (HealthFeed h : healthFeeds) {
+            cacheHealthFeedFromLocal.put(h.getUrl(), h);
+        }
+        cacheHealthFeedFromLocalIsDirty = false;
+    }
+
+    private void refreshCacheHealthFeedFromRemote(List<HealthFeed> healthFeeds) {
+        if (cacheHealthFeedFromRemote == null) {
+            cacheHealthFeedFromRemote = new LinkedHashMap<>();
+        }
+
+        if (cacheHealthFeedFromRemoteIsDirty) {
+            cacheHealthFeedFromRemote.clear();
+        }
+
+        for (HealthFeed h : healthFeeds) {
+            if (cacheHealthFeedFromLocal != null && cacheHealthFeedFromLocal.containsKey(h.getUrl())){
+                h.setBookmark(true);
+            }
+            cacheHealthFeedFromRemote.put(h.getUrl(), h);
+        }
+        Log.d("Repository", " refresh cache remote size list: " + cacheHealthFeedFromRemote.size());
+        cacheHealthFeedFromRemoteIsDirty = false;
+    }
+
+
+    private HealthFeed getHealthFeedFromLocalWithUrl(String url) {
+        if (cacheHealthFeedFromLocal == null || cacheHealthFeedFromLocal.isEmpty()) {
+            return null;
+        } else {
+            return cacheHealthFeedFromLocal.get(url);
+        }
+    }
 }

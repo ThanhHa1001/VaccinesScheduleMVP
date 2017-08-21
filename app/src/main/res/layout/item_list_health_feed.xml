@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_list_health_feed_txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingRight="32dp"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/text_color_extra_1"
+                tools:text="Bé rặn người, đỏ mặt 2 3 ngày không đi ngoài được" />
+
+            <TextView
+                android:id="@+id/item_list_health_feed_txt_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/text_color_extra_2"
+                tools:text="Chắc là có sự trùng hợp nào đó thôi, chứ không phải tắm nắng là bé không ngủ được. Em có thể lặp lại phơi nắng trẻ lúc 7-8g khoảng 20-30 phút là tốt nhất cho trẻ vì ánh nắng mặt trời giúp hấp thu canxi, là nguồn Vitamin D thiên nhiên ban tặng, nên tận dụng tối đa. Em cho con bú mẹ là tốt, khi nào không đủ sữa mẹ thì nghĩ đếnsữa công thức, khi đi làm nếu có điều kiện nên vắt sữa để dành cho bé bú cữ sau." />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end">
+
+                <ImageView
+                    android:id="@+id/item_list_health_feed_img_share"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_share_grey_24dp" />
+
+                <ImageView
+                    android:id="@+id/item_list_health_feed_img_bookmark"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_bookmark_outline_grey_24dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

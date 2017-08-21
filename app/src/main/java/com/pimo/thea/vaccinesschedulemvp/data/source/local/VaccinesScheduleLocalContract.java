@@ -107,4 +107,14 @@ public class VaccinesScheduleLocalContract {
         public final static String COLUMN_VACCINE_AFTER_INJECTION_REACTION = "after_injection_reaction";
         public final static String COLUMN_VACCINE_CODE = "code";
     }
+
+    public static abstract class HealthFeedEntry implements BaseColumns {
+        public final static String TABLE_NAME = "health_feed";
+
+        public final static String COLUMN_HEALTH_FEED_ID = BaseColumns._ID;
+        public final static String COLUMN_HEALTH_FEED_URL = "url";
+        public final static String COLUMN_HEALTH_FEED_TITLE_ASK = "title_ask";
+        public final static String COLUMN_HEALTH_FEED_CONTENT_ASK = "content_ask";
+        public final static String COLUMN_HEALTH_FEED_CONTENT_ANSWER = "content_answer";
+    }
 }

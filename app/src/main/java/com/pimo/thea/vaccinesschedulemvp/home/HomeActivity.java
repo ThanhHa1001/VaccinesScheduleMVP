@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import com.pimo.thea.vaccinesschedulemvp.R;
+import com.pimo.thea.vaccinesschedulemvp.heathfeed.HealthFeedFragment;
 import com.pimo.thea.vaccinesschedulemvp.listchild.ListChildFragment;
 import com.pimo.thea.vaccinesschedulemvp.listmoreinformation.ListMoreInformationFragment;
 import com.pimo.thea.vaccinesschedulemvp.utils.ActivityUtils;
@@ -81,8 +82,12 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.View
                     case R.id.nav_childcare:
                         presenter.openViewListChildcare();
                         break;
+                    case R.id.nav_health_feed:
+                        presenter.openHealthFeed();
+                        break;
                     case R.id.nav_information:
                         presenter.openViewAppInfo();
+                        break;
                     default:
                         break;
                 }
@@ -138,6 +143,14 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.View
     @Override
     public void showListChildcare(Bundle bundle) {
         showListVDC(bundle);
+    }
+
+    @Override
+    public void showHealthFeed() {
+        ActivityUtils.addFragmentToActivity(getSupportFragmentManager(),
+                new HealthFeedFragment(),
+                R.id.home_frame_layout,
+                HealthFeedFragment.TAG);
     }
 
     private void showListVDC(Bundle bundle) {

@@ -48,6 +48,11 @@ public class HomePresenter implements HomeContract.Presenter {
     }
 
     @Override
+    public void openHealthFeed() {
+        view.showHealthFeed();
+    }
+
+    @Override
     public void openViewAppInfo() {
         view.showAppInfo();
     }

@@ -10,6 +10,7 @@ import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocal
 import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalContract.ChildEntry;
 import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalContract.ChildcareEntry;
 import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalContract.VaccineEntry;
+import com.pimo.thea.vaccinesschedulemvp.data.source.local.VaccinesScheduleLocalContract.HealthFeedEntry;
 
 /**
  * Created by thea on 6/30/2017.
@@ -107,6 +108,17 @@ public class VaccinesScheduleLocalDbHelper extends SQLiteOpenHelper {
             + VaccineEntry.COLUMN_VACCINE_AFTER_INJECTION_REACTION + TEXT_TYPE
             + ");";
 
+    /**
+     * Create s String that contains the SQl statement to create the health feed
+     */
+    private static final String SQL_CREATE_HEALTH_FEED = "CREATE TABLE " + HealthFeedEntry.TABLE_NAME + " ("
+            + HealthFeedEntry.COLUMN_HEALTH_FEED_ID + INTEGER_TYPE + PRIMARY_KEY_AUTOINCREMENT + COMMA_SEP
+            + HealthFeedEntry.COLUMN_HEALTH_FEED_URL + TEXT_TYPE + COMMA_SEP
+            + HealthFeedEntry.COLUMN_HEALTH_FEED_TITLE_ASK + TEXT_TYPE + COMMA_SEP
+            + HealthFeedEntry.COLUMN_HEALTH_FEED_CONTENT_ASK + TEXT_TYPE + COMMA_SEP
+            + HealthFeedEntry.COLUMN_HEALTH_FEED_CONTENT_ANSWER + TEXT_TYPE
+            + ");";
+
     public VaccinesScheduleLocalDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -119,6 +131,7 @@ public class VaccinesScheduleLocalDbHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(SQL_CREATE_CHILD_TABLE);
         sqLiteDatabase.execSQL(SQL_CREATE_CHILDCARE_TABLE);
         sqLiteDatabase.execSQL(SQL_CREATE_VACCINE_TABLE);
+        sqLiteDatabase.execSQL(SQL_CREATE_HEALTH_FEED);
     }
 
     @Override
