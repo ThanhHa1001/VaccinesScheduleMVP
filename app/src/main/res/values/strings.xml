@@ -6,7 +6,7 @@
     <string name="nav_vaccine">Vắc-xin</string>
     <string name="nav_disease">Bệnh truyền nhiễm</string>
     <string name="nav_childcare">Chăm sóc trẻ</string>
-    <string name="nav_health_feed">Sức khỏe của bé</string>
+    <string name="nav_health_feed">Hỏi đáp sức khỏe</string>
     <string name="nav_information">Thông tin ứng dụng</string>
 
     <string name="editor_child_save">Save</string>
@@ -19,6 +19,7 @@
     <string name="home_title_vaccine">Vắc-xin</string>
     <string name="home_title_disease">Bệnh truyền nhiễm</string>
     <string name="home_title_childcare">Chăm sóc trẻ</string>
+    <string name="home_title_healthfeed">Hỏi đáp sức khỏe</string>
     <string name="editor_child_title_toolbar_add">Thêm thông tin trẻ</string>
     <string name="editor_child_title_toolbar_edit">Sửa thông tin trẻ</string>
     <string name="detail_inj_child_toolbar_title">Thông tin chi tiết</string>

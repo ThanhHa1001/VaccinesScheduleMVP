@@ -32,6 +32,8 @@ public interface HomeContract {
 
         void showListChildcare(Bundle bundle);
 
+        void showTitleToolbarHealthFeed();
+
         void showHealthFeed();
 
         void showAppInfo();

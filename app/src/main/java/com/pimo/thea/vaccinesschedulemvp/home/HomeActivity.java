@@ -146,6 +146,11 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.View
     }
 
     @Override
+    public void showTitleToolbarHealthFeed() {
+        actionBar.setTitle(getString(R.string.home_title_healthfeed));
+    }
+
+    @Override
     public void showHealthFeed() {
         ActivityUtils.addFragmentToActivity(getSupportFragmentManager(),
                 new HealthFeedFragment(),
